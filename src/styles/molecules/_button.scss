@@ -1,6 +1,11 @@
 @layer molecules {
 	.button {
-		display: inline-block;
+		--button-color: var(--color-neutral-000);
+		--button-background: var(--color-neutral-800);
+		
+		display: inline-flex;
+		color: var(--button-color);
+		background-color: var(--button-background);
 	}
 
 	.button--primary {
