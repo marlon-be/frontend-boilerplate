@@ -1,0 +1,12 @@
+@layer atoms {
+	.icon {
+	}
+
+	.icon--sm {
+		--icon-size: #{toRem(16px)};
+	}
+
+	.icon--lg {
+		--icon-size: #{toRem(48px)};
+	}
+}

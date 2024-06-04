@@ -1,0 +1,43 @@
+# EditorConfig is awesome: http://EditorConfig.org
+
+# top-most EditorConfig file
+root = true
+
+# Unix-style newlines
+[*]
+end_of_line = lf
+
+# All development files: set charset and add newline
+[*.{php,js,twig,yml,yaml,xml}]
+charset = utf-8
+indent_style = space 
+insert_final_newline = true
+trim_trailing_whitespace = true
+
+[*.{php,js,twig,yml,yaml,xml}]
+indent_size = 4
+
+# Yaml
+[*.{yml, yaml}]
+indent_size = 2
+
+# Stylesheets
+[*.scss]
+quote_type = double
+max_line_length = 120
+indent_style = tab
+
+# JavaScript
+[*.js]
+quote_type = single
+max_line_length = 120
+
+# package.json indentation cannot be changed
+# https://github.com/npm/npm/pull/3180#issuecomment-16336516
+[{composer.json,composer.lock,package.json,package-lock.json,package.json}]
+indent_style = space
+indent_size = 2
+
+
+
+

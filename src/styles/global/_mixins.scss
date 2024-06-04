@@ -1,0 +1,7 @@
+@function toRem($px) {
+    @return math.div($px, 16px) * 1rem;
+}
+
+@function toRGB ($color) {
+    @return "rgb(" + red($color) + ", " + green($color) + ", " + blue($color)+ ")";
+}

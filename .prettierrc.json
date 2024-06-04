@@ -1,0 +1,16 @@
+{
+    "tabWidth": 4,
+    "useTabs": true,
+    "overrides": [
+        {
+            "files": "*.scss",
+            "options": {
+                "plugins": ["prettier-plugin-css-order"],
+                "cssDeclarationSorterOrder": "smacss",
+                "trailingComma": "all",
+                "semi": true,
+                "singleQuote": false
+            }
+        }
+    ]
+}

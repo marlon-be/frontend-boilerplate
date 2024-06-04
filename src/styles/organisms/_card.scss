@@ -1,0 +1,47 @@
+@layer organisms {
+	.card {
+		--card-background: var(--color-neutral-100);
+		--card-padding: var(--spacing-5);
+		--card-border: transparent;
+		--card-gap: var(--spacing-3);
+
+		position: relative;
+		display: grid;
+		gap: var(--card-gap);
+		padding: var(--card-padding);
+		background-color: var(--card-background);
+		border: 1px solid var(--card-border);
+	}
+	
+	.card__title {
+	
+	}
+	
+	.card__description {
+	
+	}
+	
+	.card__action {
+		position: static;
+
+		&::after {
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			content: "";
+			z-index: 10;
+		}
+	}
+	
+	/* Variants */
+	.card--outline {
+		--card-background: transparent;
+		--card-border: var(--color-neutral-200);
+	}
+
+	.card--highlight {
+		--card-background: var(--color-neutral-200);
+	}
+}

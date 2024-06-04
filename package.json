@@ -1,0 +1,24 @@
+{
+    "name": "frontend-boilerplate",
+    "type": "module",
+    "version": "0.0.1",
+    "scripts": {
+        "build:css": "./node_modules/.bin/postcss src/styles/main.scss -o dist/css/main.css --verbose",
+        "watch:css": "chokidar 'src/styles/**/*.scss' --command 'npm run build:css'"
+    },
+    "dependencies": {
+        "postcss-custom-media": "^10.0.0",
+        "prettier-plugin-css-order": "^2.1.2",
+        "sass": "^1.66.1"
+    },
+    "devDependencies": {
+        "@csstools/postcss-sass": "^5.1.1",
+        "chokidar-cli": "^3.0.0",
+        "postcss": "^8.4.38",
+        "postcss-cli": "^9.1.0",
+        "postcss-easy-import": "^4.0.0",
+        "postcss-merge-rules": "^7.0.0",
+        "postcss-scss": "^4.0.9",
+        "prettier": "^3.2.5"
+    }
+}

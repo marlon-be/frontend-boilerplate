@@ -1,0 +1,30 @@
+@layer atoms {
+	:root {
+		--container-max-width: 1400px;
+		--container-padding: var(--spacing-4);
+
+		@media (--md) {
+			--container-padding: var(--spacing-5);
+		}
+
+		@media (--lg) {
+			--container-padding: var(--spacing-8);
+		}
+	}
+
+	.container {
+		display: grid;
+		grid-template-columns:
+			[full-start] minmax(var(--container-padding), 1fr)
+			[content-start] minmax(0, var(--container-max-width)) [content-end]
+			minmax(var(--container-padding), 1fr) [full-end];
+
+		& > * {
+			grid-column: content;
+		}
+
+		& > .full {
+			grid-column: full;
+		}
+	}
+}

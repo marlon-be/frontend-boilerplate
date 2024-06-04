@@ -1,0 +1,26 @@
+@layer atoms {
+	.grid {
+		--grid-columns: 1;
+		--grid-gap: var(--default-column-gap);
+
+		display: grid;
+		grid-template-columns: repeat(var(--grid-columns), 1fr);
+		gap: var(--grid-gap);
+	}
+
+	@media (--sm) {
+		.grid--2 { --grid-columns: 2; }
+		.grid--3 { --grid-columns: 2; }
+	}
+
+	@media (--md) {
+		.grid--3 { --grid-columns: 3; }
+	}
+
+	.grid--fluid {
+		--grid-min-width: 30ch;
+
+		grid-template-columns: repeat(auto-fit, minmax(min(var(--grid-min-width), 100%), 1fr));
+	}
+}
+
