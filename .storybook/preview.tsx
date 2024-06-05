@@ -6,6 +6,9 @@ import '../dist/storybook/css/main.css';
 
 const preview: Preview = {
 	parameters: {
+		storySort: {
+			order: ['Global', 'Atoms', 'Molecules', 'Organisms'],
+		},
 		controls: {
 			matchers: {
 				color: /(background|color)$/i,
