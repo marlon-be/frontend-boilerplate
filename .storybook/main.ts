@@ -5,8 +5,8 @@ const config: StorybookConfig = {
   	framework: '@storybook/react-webpack5',
   	stories: ['../src/**/*.mdx', '../src/**/*.stories.@(js|jsx|mjs|ts|tsx)'],
   	staticDirs: [
-		{ from: '../dist/assets', to: '/assets' },
-		{ from: '../dist/css', to: '/css' }
+		{ from: '../dist/assets', to: '/dist/assets' },
+		{ from: '../dist/css', to: '/dist/css' }
 	],
 	// Optional
   	addons: [
