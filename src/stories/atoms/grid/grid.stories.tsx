@@ -148,39 +148,23 @@ export const Browser: Story = {
 				<div className="grid grid--3">
 					<CardProduct
 						title="Product A"
-						description=""
-						href=""
-						link="Book an appointment"
 					/>
 
 					<CardProduct
 						title="Product B"
-						description=""
-						href=""
-						link="Book an appointment"
 					/>
 
 					<CardProduct
 						title="Product C"
-						description=""
-						href=""
-						link="Book an appointment"
 					/>
 
 					<CardProduct
 						title="Product D"
-						description=""
-						href=""
-						link="Book an appointment"
 					/>
 
 					<CardProduct
 						title="Product E"
-						description=""
-						href=""
-						link="Book an appointment"
 					/>
-
 				</div>
 			</div>
 		</section>

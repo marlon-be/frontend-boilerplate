@@ -2,11 +2,11 @@ import { cn } from "../../../js/utils/style";
 import Button from "../../atoms/button/button";
 
 export interface PropsType {
-	title: string;
+	title?: string;
 	image?: string;
 	description?: string;
-	href: string;
-	link: string;
+	href?: string;
+	link?: string;
 }
 
 export default function CardProduct({ title, image, description, href, link }: PropsType) {
@@ -21,7 +21,7 @@ export default function CardProduct({ title, image, description, href, link }: P
 
 			<div className="card__actions">
 				<Button
-					href={href}
+					href={href || ""}
 					as="link" 
 					className="card__action"
 				>
