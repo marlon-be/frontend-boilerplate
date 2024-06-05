@@ -1,3 +1,7 @@
 .section + .section {
 	margin-block-start: var(--default-column-gap);
 }
+
+.section__title {
+	margin-block-end: var(--spacing-4);
+}

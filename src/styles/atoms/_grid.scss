@@ -22,5 +22,18 @@
 
 		grid-template-columns: repeat(auto-fit, minmax(min(var(--grid-min-width), 100%), 1fr));
 	}
+
+	// Custom grids as examples
+	.grid--content {
+		grid-template-columns: 1fr 4fr;
+	}
+
+	.grid--browser {
+		grid-template-columns: 1fr 3fr;
+	}
+
+	.grid--support {
+		grid-template-columns: 1fr 3fr 1fr;
+	}
 }
 

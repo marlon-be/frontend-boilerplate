@@ -1,0 +1,21 @@
+{
+    "compilerOptions": {
+      "strict": true,
+      "outDir": "./dist/",
+      "sourceMap": true,
+      "noImplicitAny": true,
+      "module": "esNext",
+      "target": "ES2015",
+      "jsx": "preserve",
+      "allowJs": true,
+      "resolveJsonModule": true,
+      "esModuleInterop": true,
+      "baseUrl": ".",
+      "moduleResolution": "node",
+      "downlevelIteration": true,
+      "lib": ["dom", "es2020", "dom.iterable"]
+    },
+    "include": ["**/*.js", "**/*.ts", "**/*.tsx", "**/*.d.ts"],
+    "exclude": ["node_modules"]
+  }
+  

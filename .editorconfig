@@ -28,9 +28,11 @@ max_line_length = 120
 indent_style = tab
 
 # JavaScript
-[*.js]
+[*.{js,ts,jsx,tsx}]
 quote_type = single
 max_line_length = 120
+indent_style = tab
+indent_size = 4
 
 # package.json indentation cannot be changed
 # https://github.com/npm/npm/pull/3180#issuecomment-16336516
