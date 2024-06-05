@@ -1,0 +1,50 @@
+import { Meta, Primary, Controls, Canvas, Story, Source } from '@storybook/blocks';
+import * as ContainerStories from './container.stories';
+
+<Meta of={ContainerStories} />
+
+# Container
+
+## A modern approach to containers, using CSS grid. 
+
+Containers help constrain the content to a certain maximum width, while centering the content. 
+In the past we used `max-width` and `margin` for this, but these days a more modern approach is using CSS grid for this.
+
+The concept remains the same, you wrap your HTML elements with a `.container` class.
+The CSS on the other hand, makes use of named grid lines and some clever grid columns.
+
+## Usage
+
+Currently the container supports the following children: 
+- `.full` (full-width content), 
+- `.breakout` (breakout content)
+- default centered content
+
+```html
+<div class="container">
+    <div class="full">
+        This is fullwidth content
+    </div>
+
+    <div>
+        This is normal container content.
+    </div>
+
+    <div class="breakout">
+        This is breakout content
+    </div>
+</div>
+```
+
+## Customizing
+You can change some CSS variables for customizing your containers.
+
+```css
+--container-gap: clamp(var(--spacing-4), 6vw, var(--spacing-8));
+--container-max-width: minmax(var(--container-gap), 1fr);
+--content-max-width: min(120ch, 100% - var(--container-gap) * 2);
+--breakout: minmax(0, var(--spacing-9));
+```
+
+Currently the content is limited to `120ch`. You could use a `px` value here if your prefer this more.
+Feel free to change the spacing variables to your liking as well.

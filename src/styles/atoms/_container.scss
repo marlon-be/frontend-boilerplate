@@ -13,11 +13,18 @@
 	}
 
 	.container {
+		--container-gap: clamp(var(--spacing-4), 6vw, var(--spacing-8));
+		--container-max-width: minmax(var(--container-gap), 1fr);
+		--content-max-width: min(120ch, 100% - var(--container-gap) * 2);
+		--breakout: minmax(0, var(--spacing-9));
+
 		display: grid;
 		grid-template-columns:
-			[full-start] minmax(var(--container-padding), 1fr)
-			[content-start] minmax(0, var(--container-max-width)) [content-end]
-			minmax(var(--container-padding), 1fr) [full-end];
+			[full-start] var(--container-max-width)
+			[breakout-start] var(--breakout)
+			[content-start] var(--content-max-width) [content-end]
+			var(--breakout) [breakout-end]
+			var(--container-max-width) [full-end];
 
 		& > * {
 			grid-column: content;
@@ -25,6 +32,10 @@
 
 		& > .full {
 			grid-column: full;
+		}
+
+		& > .breakout {
+			grid-column: breakout;
 		}
 	}
 }

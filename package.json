@@ -6,7 +6,7 @@
     "copy:assets": "cp -Rf ./src/assets/* ./dist/assets/",
     "watch:css": "chokidar 'src/styles/**/*.scss' --command 'npm run build:css'",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build -o dist/storybook"
   },
   "dependencies": {
     "clsx": "^2.1.1",

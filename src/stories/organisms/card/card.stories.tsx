@@ -11,4 +11,4 @@ const meta = {
 	parameters: {},
   } satisfies Meta<typeof Component>;
   
-  export default meta;
+export default meta;
