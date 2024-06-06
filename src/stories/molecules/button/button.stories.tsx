@@ -18,7 +18,7 @@ export const Link: Story = {
 
 export default {
   component: Button,
-  title: "Atoms/Button",
+  title: "Molecules/Button",
   parameters: {
     layout: "centered",
   },

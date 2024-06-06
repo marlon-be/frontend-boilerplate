@@ -1,5 +1,5 @@
 import { cn } from "../../../js/utils/style";
-import Button from "../../atoms/button/button";
+import Button from "../../molecules/button/button";
 
 export interface PropsType {
 	title?: string;
