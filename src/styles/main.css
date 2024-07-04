@@ -1,34 +1,31 @@
 @charset "UTF-8";
-@use "sass:math";
-
 @layer global, atoms, molecules, organisms, utilities;
 
-// Globals & helpers
-@import "global/mixins";
+/* Globals & helpers */
 @import "global/mediaqueries";
 @import "global/fonts";
 @import "global/reboot";
 
-// Variables
+/* Variables */
 @import "global/colors";
 @import "global/spacing";
 
-// Atoms
+/* Atoms */
 @import "atoms/container";
 @import "atoms/grid";
 @import "atoms/icon";
 @import "atoms/section";
 
-// Molecules
+/* Molecules */
 @import "molecules/button";
 
-// Organisms
+/* Organisms */
 @import "organisms/card";
 @import "organisms/header";
 
-// Pages
+/* Pages */
 
-// Templates
+/* Templates */
 
-// Utilities
+/* Utilities */
 @import "utilities/screenreader";

@@ -3,9 +3,11 @@
     "useTabs": true,
     "overrides": [
         {
-            "files": "*.scss",
+            "files": "*.css",
             "options": {
-                "plugins": ["prettier-plugin-css-order"],
+                "plugins": [
+                    "prettier-plugin-css-order"
+                ],
                 "cssDeclarationSorterOrder": "smacss",
                 "trailingComma": "all",
                 "semi": true,
