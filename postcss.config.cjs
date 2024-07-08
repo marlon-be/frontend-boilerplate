@@ -1,6 +1,5 @@
 // postcss.config.js
 module.exports = {
-	parser: "postcss-scss",
 	plugins: [
 		require("postcss-easy-import")({
 			prefix: "_",

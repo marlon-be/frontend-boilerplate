@@ -13,7 +13,7 @@
 	}
 
 	.container {
-		--container-gap: clamp(var(--spacing-4), 6vw, var(--spacing-8));
+		--container-gap: clamp(var(--spacing-5), 6vw, var(--spacing-8));
 		--container-max-width: minmax(var(--container-gap), 1fr);
 		--content-max-width: min(140ch, 100% - var(--container-gap) * 2);
 		--breakout: minmax(0, var(--spacing-9));

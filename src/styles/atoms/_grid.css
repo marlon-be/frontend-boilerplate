@@ -9,21 +9,30 @@
 	}
 
 	@media (--sm) {
-		.grid--2 { --grid-columns: 2; }
-		.grid--3 { --grid-columns: 2; }
+		.grid--2 {
+			--grid-columns: 2;
+		}
+		.grid--3 {
+			--grid-columns: 2;
+		}
 	}
 
 	@media (--md) {
-		.grid--3 { --grid-columns: 3; }
+		.grid--3 {
+			--grid-columns: 3;
+		}
 	}
 
 	.grid--fluid {
 		--grid-min-width: 30ch;
 
-		grid-template-columns: repeat(auto-fit, minmax(min(var(--grid-min-width), 100%), 1fr));
+		grid-template-columns: repeat(
+			auto-fit,
+			minmax(min(var(--grid-min-width), 100%), 1fr)
+		);
 	}
 
-	// Custom grids as examples
+	/* Custom grids as examples */
 	.grid--content {
 		grid-template-columns: 1fr 4fr;
 	}
@@ -36,4 +45,3 @@
 		grid-template-columns: 1fr 3fr 1fr;
 	}
 }
-

@@ -1,14 +1,27 @@
 @layer molecules {
 	.button {
 		--button-color: var(--color-neutral-000);
+		--button-padding-x: var(--spacing-3);
+		--button-padding-y: var(--spacing-2);
 		--button-background: var(--color-neutral-800);
-		
+		--button-underline-offset: 4px;
+
 		display: inline-flex;
-		color: var(--button-color);
+		padding: var(--button-padding-y) var(--button-padding-x);
 		background-color: var(--button-background);
+		color: var(--button-color);
 	}
 
 	.button--primary {
 		border: none;
+	}
+
+	.button--link {
+		--button-padding-x: 0;
+		--button-padding-y: 0;
+		--button-background: transparent;
+		--button-color: var(--color-neutral-800);
+		text-decoration: underline;
+		text-underline-offset: var(--button-underline-offset);
 	}
 }

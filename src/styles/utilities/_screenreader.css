@@ -4,15 +4,15 @@
 		width: 1px;
 		height: 1px;
 		padding: 0;
-		white-space: nowrap;
-		border: 0;
 		overflow: hidden;
+		border: 0;
+		white-space: nowrap;
 		clip: rect(0, 0, 0, 0);
 		clip-path: inset(50%);
 	}
 
 	.sr-only-focusable {
 		transform: translateY(-100%);
-		transition: transform .24s ease-out;
+		transition: transform 0.24s ease-out;
 	}
 }
