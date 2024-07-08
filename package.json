@@ -7,7 +7,7 @@
     "watch:css": "chokidar 'src/styles/**/*.css' --command 'npm run build:css'",
     "storybook": "npm run build-storybook && storybook dev -p 6006",
     "build-storybook": "storybook build -o dist/storybook",
-    "build-storybook:css": "./node_modules/.bin/postcss src/styles/main.scss -o dist/css/main.css --verbose"
+    "build-storybook:css": "./node_modules/.bin/postcss src/styles/main.css -o dist/css/main.css --verbose"
   },
   "dependencies": {
     "clsx": "^2.1.1",
