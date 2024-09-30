@@ -1,31 +1,33 @@
 @charset "UTF-8";
-@layer global, atoms, molecules, organisms, utilities;
 
-/* Globals & helpers */
-@import "global/mediaqueries";
-@import "global/fonts";
-@import "global/reboot";
+@import "global/_layers.css";
+@import "global/_reset.css";
+@import "global/_mediaqueries.css";
 
 /* Variables */
-@import "global/colors";
-@import "global/spacing";
+@import "global/variables/_colors.css";
+@import "global/variables/_spacing.css";
 
 /* Atoms */
-@import "atoms/container";
-@import "atoms/grid";
-@import "atoms/icon";
-@import "atoms/section";
+@import "atoms/_typography.css";
+@import "atoms/_container.css";
+@import "atoms/_icon.css";
+@import "atoms/_section.css";
 
 /* Molecules */
-@import "molecules/button";
+@import "molecules/_alert.css";
+@import "molecules/_button.css";
 
 /* Organisms */
-@import "organisms/card";
-@import "organisms/header";
-
-/* Pages */
+@import "organisms/_card.css";
+@import "organisms/_header.css";
 
 /* Templates */
+@import "templates/_grid.css";
+@import "templates/_breakout-grid.css";
+
+/* Pages */
+@import "pages/_default.css";
 
 /* Utilities */
-@import "utilities/screenreader";
+@import "utilities/_screenreader.css";

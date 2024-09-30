@@ -1,4 +1,4 @@
-@layer molecules {
+@layer molecules.button {
 	.button {
 		--button-color: var(--color-neutral-000);
 		--button-padding-x: var(--spacing-3);

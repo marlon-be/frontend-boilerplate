@@ -1,41 +1,26 @@
-@layer atoms {
+@layer theme {
 	:root {
-		--container-max-width: 1400px;
-		--container-padding: var(--spacing-4);
-
-		@media (--md) {
-			--container-padding: var(--spacing-5);
+		--container-max-width: 100%;
+		--container-padding: 10px;
+		@media screen and (min-width: 768px) {
+			--container-max-width: 800px;
+			--container-padding: 12px;
 		}
-
-		@media (--lg) {
-			--container-padding: var(--spacing-8);
+		@media screen and (min-width: 1000px) {
+			--container-max-width: 940px;
+			--container-padding: 24px;
+		}
+		@media screen and (min-width: 1200px) {
+			--container-max-width: 1200px;
+			--container-padding: 40px;
 		}
 	}
+}
 
+@layer atoms {
 	.container {
-		--container-gap: clamp(var(--spacing-5), 6vw, var(--spacing-8));
-		--container-max-width: minmax(var(--container-gap), 1fr);
-		--content-max-width: min(140ch, 100% - var(--container-gap) * 2);
-		--breakout: minmax(0, var(--spacing-9));
-
-		display: grid;
-		grid-template-columns:
-			[full-start] var(--container-max-width)
-			[breakout-start] var(--breakout)
-			[content-start] var(--content-max-width) [content-end]
-			var(--breakout) [breakout-end]
-			var(--container-max-width) [full-end];
-
-		& > * {
-			grid-column: content;
-		}
-
-		& > .full {
-			grid-column: full;
-		}
-
-		& > .breakout {
-			grid-column: breakout;
-		}
+		max-width: var(--container-max-width);
+		margin-inline: auto;
+		padding-inline: var(--container-padding);
 	}
 }

@@ -1,0 +1,84 @@
+@layer theme {
+	@font-face {
+		font-style: normal;
+		font-weight: 400;
+		src: url("../assets/fonts/montserrat-v26-latin-regular.woff2")
+			format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+		font-family: "Montserrat";
+		font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+	}
+	/* montserrat-500 - latin */
+
+	@font-face {
+		font-style: normal;
+		font-weight: 500;
+		src: url("../assets/fonts/montserrat-v26-latin-500.woff2")
+			format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+		font-family: "Montserrat";
+		font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+	}
+	/* montserrat-700 - latin */
+	@font-face {
+		font-style: normal;
+		font-weight: 700;
+		src: url("../assets/fonts/montserrat-v26-latin-700.woff2")
+			format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+		font-family: "Montserrat";
+		font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+	}
+
+	:root {
+		--font-family-base: "Montserrat", Helvetica, sans-erif;
+		--font-family-heading: "Montserrat", times, serif;
+		--font-size-base: var(--16px);
+		--line-height-base: 1.5;
+	}
+}
+
+@layer atoms.typography {
+	/* Example fluid typography */
+	h1,
+	.h1 {
+		margin-bottom: fluid(1rem, 1.3rem, 640px, 1920px);
+		font-size: fluid(2rem, 2.9rem, 640px, 1920px);
+		font-family: var(--font-family-heading);
+	}
+
+	/* classic typography */
+	h2,
+	.h2 {
+		margin-bottom: var(--spacing-5);
+		font-size: var(--30px);
+		line-height: 1.3;
+		font-family: var(--font-family-heading);
+	}
+
+	h3,
+	.h3 {
+		margin-bottom: var(--spacing-4);
+		font-weight: 600;
+		font-size: var(--24px);
+		font-family: var(--font-family-heading);
+	}
+
+	h4,
+	.h4 {
+		margin-bottom: var(--spacing-3);
+		font-weight: 600;
+		font-size: var(--23px);
+	}
+
+	.lead,
+	.lead p {
+		margin-bottom: var(--spacing-3);
+		color: var(--color-grey-700);
+		font-size: var(--20px);
+		line-height: 1.6;
+	}
+
+	ul {
+		& li::marker {
+			color: var(--accent-color);
+		}
+	}
+}

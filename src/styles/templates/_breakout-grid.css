@@ -1,0 +1,66 @@
+/* Grid is combined with exposed container classes, create your own at https://layout-breakouts-builder.vercel.app/ */
+
+@layer templates {
+	/** BASE SETUP **/
+	.page-layout > *,
+	.full-width > * {
+		grid-column: content;
+	}
+	.page-layout,
+	.full-width {
+		--minimum-content-padding: var(--container-padding);
+
+		/** TRACK WIDTHS **/
+		--full-max-width: 1fr;
+		--content-max-width: var(--container-max-width);
+
+		/** TRACK SIZES **/
+		--full: minmax(var(--minimum-content-padding), 1fr);
+		--content: min(
+			var(--content-max-width),
+			100% - var(--minimum-content-padding) * 2
+		);
+
+		display: grid;
+		grid-template-columns:
+			[full-start]
+			var(--full)
+			[content-start]
+			var(--content)
+			[content-end]
+			var(--full)
+			[full-end];
+	}
+
+	/** CLASSES USED FOR THIS **/
+	.full {
+		grid-column: full;
+	}
+	.full-start {
+		grid-column-start: full-start;
+	}
+	.full-end {
+		grid-column-end: full-end;
+	}
+
+	.content {
+		grid-column: content;
+	}
+	.content-start {
+		grid-column-start: content-start;
+	}
+	.content-end {
+		grid-column-end: content-end;
+	}
+
+	.full-width {
+		grid-column: full;
+	}
+	.full-content,
+	.full-content-nopad {
+		grid-column: full;
+	}
+	.full-content {
+		padding-inline: var(--minimum-content-padding);
+	}
+}

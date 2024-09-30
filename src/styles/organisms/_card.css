@@ -1,4 +1,4 @@
-@layer organisms {
+@layer organisms.card {
 	.card {
 		--card-background: var(--color-neutral-100);
 		--card-padding: var(--spacing-5);

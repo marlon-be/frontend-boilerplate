@@ -1,0 +1,34 @@
+@layer atoms.alert {
+	.alert {
+		--alert-padding-x: var(--spacing-3);
+		--alert-padding-y: var(--spacing-2);
+		--_background: var(--background, var(--color-neutral-200));
+		--_color: var(--color, var(--color-darkest));
+
+		position: relative;
+		padding: var(--alert-padding-y) var(--alert-padding-x);
+		border-radius: 5px;
+		background: var(--_background);
+		color: var(--_color);
+		.close {
+			position: absolute;
+			inset-block-start: var(--alert-padding-y);
+			inset-inline-end: var(--alert-padding-x);
+		}
+	}
+
+	.alert--success {
+		--background: var(--color-success);
+		--color: var(--color-lightest);
+	}
+
+	.alert--warning {
+		--background: var(--color-warning);
+		--color: var(--color-lightest);
+	}
+
+	.alert--error {
+		--background: var(--color-error);
+		--color: var(--color-lightest);
+	}
+}

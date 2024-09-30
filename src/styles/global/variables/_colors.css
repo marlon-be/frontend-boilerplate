@@ -1,0 +1,31 @@
+@layer theme {
+	:root {
+		--color-lightest: beige;
+		--color-primary: darkcyan;
+		--color-primary-light: mediumaquamarine;
+		--color-secondary: deeppink;
+		--color-secondary-light: purple;
+		--color-darkest: rgb(10, 10, 10);
+
+		--color-neutral-000: #fff;
+		--color-neutral-100: #f2f2f2;
+		--color-neutral-200: #d2d2d2;
+		--color-neutral-300: #b4b4b4;
+		--color-neutral-400: #969696;
+		--color-neutral-500: #787878;
+		--color-neutral-600: #5a5a5a;
+		--color-neutral-700: #3c3c3c;
+		--color-neutral-800: #1e1e1e;
+		--color-neutral-900: #000;
+
+		/* Status colors */
+		--color-success: green;
+		--color-warning: goldenrod;
+		--color-error: indianred;
+
+		/* Theme colors used */
+		--accent-color: var(--color-primary);
+		--color-background: var(--color-lightest);
+		--color-text: var(--color-darkest);
+	}
+}
