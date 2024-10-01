@@ -16,6 +16,8 @@
 		-moz-text-size-adjust: none;
 		-webkit-text-size-adjust: none;
 		text-size-adjust: none;
+		container-name: root-container;
+		container-type: inline-size;
 		scroll-behavior: smooth;
 	}
 

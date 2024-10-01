@@ -43,4 +43,43 @@
 	.card--highlight {
 		--card-background: var(--color-neutral-200);
 	}
+
+	.card__content {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.card--image {
+		display: flex;
+		flex-direction: column;
+		min-height: 100%;
+		img {
+			aspect-ratio: 16 / 9;
+			inline-size: min-content;
+			margin-block: 0 1rem;
+			object-fit: cover;
+			border-radius: 0.5rem;
+		}
+		.card__actions {
+			margin-top: auto;
+		}
+		p {
+			display: none;
+			margin-block-end: 20px;
+		}
+		@container grid-item (min-width: 500px) {
+			display: grid;
+			grid-template-columns: 1fr 2fr;
+			grid-row: auto / span 4;
+			gap: 1rem;
+			img {
+				grid-row: auto / span 3;
+				aspect-ratio: auto;
+				height: 100%;
+			}
+			p {
+				display: block;
+			}
+		}
+	}
 }

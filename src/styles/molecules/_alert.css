@@ -1,4 +1,4 @@
-@layer atoms.alert {
+@layer molecules.alert {
 	.alert {
 		--alert-padding-x: var(--spacing-3);
 		--alert-padding-y: var(--spacing-2);

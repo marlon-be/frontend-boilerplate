@@ -11,41 +11,51 @@ export type PropsType = HTMLAttributes<HTMLElement>;
 export const BaseGrid: Story = {
 	render: (props: PropsType) => (
 		<div className="grid">
-			<Card
-				title="Enim amet velit laboris"
-				description="Aliquip occaecat do Lorem labore veniam proident veniam. Amet nostrud incididunt in cupidatat consectetur veniam ullamco ullamco mollit officia excepteur id quis."
-				href=""
-				link="Learn more about us"
-				type="default"
-			/>
-			<Card
-				title="Laboris eiusmod labore"
-				description="Ad aliqua dolor irure cupidatat. Ullamco voluptate consequat consectetur ut id tempor ut officia magna."
-				href=""
-				link="Download our whitepaper"
-				type="default"
-			/>
-			<Card
-				title="Veniam consectetur eiusmod ad id"
-				description="In cupidatat reprehenderit proident quis eiusmod cillum sint dolore ut duis. Voluptate qui Lorem voluptate proident."
-				href=""
-				link="Visit our showroom"
-				type="outline"
-			/>
-			<Card
-				title="Veniam consectetur eiusmod ad id"
-				description="In cupidatat reprehenderit proident quis eiusmod cillum sint dolore ut duis. Voluptate qui Lorem voluptate proident."
-				href=""
-				link="Visit our showroom"
-				type="outline"
-			/>
-			<Card
-				title="Veniam consectetur eiusmod ad id"
-				description="In cupidatat reprehenderit proident quis eiusmod cillum sint dolore ut duis. Voluptate qui Lorem voluptate proident."
-				href=""
-				link="Visit our showroom"
-				type="outline"
-			/>
+			<div>
+				<Card
+					title="Enim amet velit laboris"
+					description="Aliquip occaecat do Lorem labore veniam proident veniam. Amet nostrud incididunt in cupidatat consectetur veniam ullamco ullamco mollit officia excepteur id quis."
+					href=""
+					link="Learn more about us"
+					type="image"
+				/>
+			</div>
+			<div>
+				<Card
+					title="Laboris eiusmod labore"
+					description="Ad aliqua dolor irure cupidatat. Ullamco voluptate consequat consectetur ut id tempor ut officia magna."
+					href=""
+					link="Download our whitepaper"
+					type="image"
+				/>
+			</div>
+			<div>
+				<Card
+					title="Veniam consectetur eiusmod ad id"
+					description="In cupidatat reprehenderit proident quis eiusmod cillum sint dolore ut duis. Voluptate qui Lorem voluptate proident."
+					href=""
+					link="Visit our showroom"
+					type="image"
+				/>
+			</div>
+			<div>
+				<Card
+					title="Veniam consectetur eiusmod ad id"
+					description="In cupidatat reprehenderit proident quis eiusmod cillum sint dolore ut duis. Voluptate qui Lorem voluptate proident."
+					href=""
+					link="Visit our showroom"
+					type="image"
+				/>
+			</div>
+			<div>
+				<Card
+					title="Veniam consectetur eiusmod ad id"
+					description="In cupidatat reprehenderit proident quis eiusmod cillum sint dolore ut duis. Voluptate qui Lorem voluptate proident."
+					href=""
+					link="Visit our showroom"
+					type="image"
+				/>
+			</div>
 		</div>
 	),
 };
@@ -53,41 +63,51 @@ export const BaseGrid: Story = {
 export const FluidGrid: Story = {
 	render: (props: PropsType) => (
 		<div className="fluid-grid">
-			<Card
-				title="Enim amet velit laboris"
-				description="Aliquip occaecat do Lorem labore veniam proident veniam. Amet nostrud incididunt in cupidatat consectetur veniam ullamco ullamco mollit officia excepteur id quis."
-				href=""
-				link="Learn more about us"
-				type="default"
-			/>
-			<Card
-				title="Laboris eiusmod labore"
-				description="Ad aliqua dolor irure cupidatat. Ullamco voluptate consequat consectetur ut id tempor ut officia magna."
-				href=""
-				link="Download our whitepaper"
-				type="default"
-			/>
-			<Card
-				title="Veniam consectetur eiusmod ad id"
-				description="In cupidatat reprehenderit proident quis eiusmod cillum sint dolore ut duis. Voluptate qui Lorem voluptate proident."
-				href=""
-				link="Visit our showroom"
-				type="outline"
-			/>
-			<Card
-				title="Veniam consectetur eiusmod ad id"
-				description="In cupidatat reprehenderit proident quis eiusmod cillum sint dolore ut duis. Voluptate qui Lorem voluptate proident."
-				href=""
-				link="Visit our showroom"
-				type="outline"
-			/>
-			<Card
-				title="Veniam consectetur eiusmod ad id"
-				description="In cupidatat reprehenderit proident quis eiusmod cillum sint dolore ut duis. Voluptate qui Lorem voluptate proident."
-				href=""
-				link="Visit our showroom"
-				type="outline"
-			/>
+			<div>
+				<Card
+					title="Enim amet velit laboris"
+					description="Aliquip occaecat do Lorem labore veniam proident veniam. Amet nostrud incididunt in cupidatat consectetur veniam ullamco ullamco mollit officia excepteur id quis."
+					href=""
+					link="Learn more about us"
+					type="image"
+				/>
+			</div>
+			<div>
+				<Card
+					title="Laboris eiusmod labore"
+					description="Ad aliqua dolor irure cupidatat. Ullamco voluptate consequat consectetur ut id tempor ut officia magna."
+					href=""
+					link="Download our whitepaper"
+					type="image"
+				/>
+			</div>
+			<div>
+				<Card
+					title="Veniam consectetur eiusmod ad id"
+					description="In cupidatat reprehenderit proident quis eiusmod cillum sint dolore ut duis. Voluptate qui Lorem voluptate proident."
+					href=""
+					link="Visit our showroom"
+					type="image"
+				/>
+			</div>
+			<div>
+				<Card
+					title="Veniam consectetur eiusmod ad id"
+					description="In cupidatat reprehenderit proident quis eiusmod cillum sint dolore ut duis. Voluptate qui Lorem voluptate proident."
+					href=""
+					link="Visit our showroom"
+					type="image"
+				/>
+			</div>
+			<div>
+				<Card
+					title="Veniam consectetur eiusmod ad id"
+					description="In cupidatat reprehenderit proident quis eiusmod cillum sint dolore ut duis. Voluptate qui Lorem voluptate proident."
+					href=""
+					link="Visit our showroom"
+					type="image"
+				/>
+			</div>
 		</div>
 	),
 };
@@ -95,41 +115,51 @@ export const FluidGrid: Story = {
 export const FluidFlex: Story = {
 	render: (props: PropsType) => (
 		<div className="fluid-flex">
-			<Card
-				title="Enim amet velit laboris"
-				description="Aliquip occaecat do Lorem labore veniam proident veniam. Amet nostrud incididunt in cupidatat consectetur veniam ullamco ullamco mollit officia excepteur id quis."
-				href=""
-				link="Learn more about us"
-				type="default"
-			/>
-			<Card
-				title="Laboris eiusmod labore"
-				description="Ad aliqua dolor irure cupidatat. Ullamco voluptate consequat consectetur ut id tempor ut officia magna."
-				href=""
-				link="Download our whitepaper"
-				type="default"
-			/>
-			<Card
-				title="Veniam consectetur eiusmod ad id"
-				description="In cupidatat reprehenderit proident quis eiusmod cillum sint dolore ut duis. Voluptate qui Lorem voluptate proident."
-				href=""
-				link="Visit our showroom"
-				type="outline"
-			/>
-			<Card
-				title="Veniam consectetur eiusmod ad id"
-				description="In cupidatat reprehenderit proident quis eiusmod cillum sint dolore ut duis. Voluptate qui Lorem voluptate proident."
-				href=""
-				link="Visit our showroom"
-				type="outline"
-			/>
-			<Card
-				title="Veniam consectetur eiusmod ad id"
-				description="In cupidatat reprehenderit proident quis eiusmod cillum sint dolore ut duis. Voluptate qui Lorem voluptate proident."
-				href=""
-				link="Visit our showroom"
-				type="outline"
-			/>
+			<div>
+				<Card
+					title="Enim amet velit laboris"
+					description="Aliquip occaecat do Lorem labore veniam proident veniam. Amet nostrud incididunt in cupidatat consectetur veniam ullamco ullamco mollit officia excepteur id quis."
+					href=""
+					link="Learn more about us"
+					type="image"
+				/>
+			</div>
+			<div>
+				<Card
+					title="Laboris eiusmod labore"
+					description="Ad aliqua dolor irure cupidatat. Ullamco voluptate consequat consectetur ut id tempor ut officia magna."
+					href=""
+					link="Download our whitepaper"
+					type="image"
+				/>
+			</div>
+			<div>
+				<Card
+					title="Veniam consectetur eiusmod ad id"
+					description="In cupidatat reprehenderit proident quis eiusmod cillum sint dolore ut duis. Voluptate qui Lorem voluptate proident."
+					href=""
+					link="Visit our showroom"
+					type="image"
+				/>
+			</div>
+			<div>
+				<Card
+					title="Veniam consectetur eiusmod ad id"
+					description="In cupidatat reprehenderit proident quis eiusmod cillum sint dolore ut duis. Voluptate qui Lorem voluptate proident."
+					href=""
+					link="Visit our showroom"
+					type="image"
+				/>
+			</div>
+			<div>
+				<Card
+					title="Veniam consectetur eiusmod ad id"
+					description="In cupidatat reprehenderit proident quis eiusmod cillum sint dolore ut duis. Voluptate qui Lorem voluptate proident."
+					href=""
+					link="Visit our showroom"
+					type="image"
+				/>
+			</div>
 		</div>
 	),
 };
@@ -137,41 +167,51 @@ export const FluidFlex: Story = {
 export const RepeatingGrid: Story = {
 	render: (props: PropsType) => (
 		<div className="repeating-grid">
-			<Card
-				title="Enim amet velit laboris"
-				description="Aliquip occaecat do Lorem labore veniam proident veniam. Amet nostrud incididunt in cupidatat consectetur veniam ullamco ullamco mollit officia excepteur id quis."
-				href=""
-				link="Learn more about us"
-				type="default"
-			/>
-			<Card
-				title="Laboris eiusmod labore"
-				description="Ad aliqua dolor irure cupidatat. Ullamco voluptate consequat consectetur ut id tempor ut officia magna."
-				href=""
-				link="Download our whitepaper"
-				type="default"
-			/>
-			<Card
-				title="Veniam consectetur eiusmod ad id"
-				description="In cupidatat reprehenderit proident quis eiusmod cillum sint dolore ut duis. Voluptate qui Lorem voluptate proident."
-				href=""
-				link="Visit our showroom"
-				type="outline"
-			/>
-			<Card
-				title="Veniam consectetur eiusmod ad id"
-				description="In cupidatat reprehenderit proident quis eiusmod cillum sint dolore ut duis. Voluptate qui Lorem voluptate proident."
-				href=""
-				link="Visit our showroom"
-				type="outline"
-			/>
-			<Card
-				title="Veniam consectetur eiusmod ad id"
-				description="In cupidatat reprehenderit proident quis eiusmod cillum sint dolore ut duis. Voluptate qui Lorem voluptate proident."
-				href=""
-				link="Visit our showroom"
-				type="outline"
-			/>
+			<div>
+				<Card
+					title="Enim amet velit laboris"
+					description="Aliquip occaecat do Lorem labore veniam proident veniam. Amet nostrud incididunt in cupidatat consectetur veniam ullamco ullamco mollit officia excepteur id quis."
+					href=""
+					link="Learn more about us"
+					type="image"
+				/>
+			</div>
+			<div>
+				<Card
+					title="Laboris eiusmod labore"
+					description="Ad aliqua dolor irure cupidatat. Ullamco voluptate consequat consectetur ut id tempor ut officia magna."
+					href=""
+					link="Download our whitepaper"
+					type="image"
+				/>
+			</div>
+			<div>
+				<Card
+					title="Veniam consectetur eiusmod ad id"
+					description="In cupidatat reprehenderit proident quis eiusmod cillum sint dolore ut duis. Voluptate qui Lorem voluptate proident."
+					href=""
+					link="Visit our showroom"
+					type="image"
+				/>
+			</div>
+			<div>
+				<Card
+					title="Veniam consectetur eiusmod ad id"
+					description="In cupidatat reprehenderit proident quis eiusmod cillum sint dolore ut duis. Voluptate qui Lorem voluptate proident."
+					href=""
+					link="Visit our showroom"
+					type="image"
+				/>
+			</div>
+			<div>
+				<Card
+					title="Veniam consectetur eiusmod ad id"
+					description="In cupidatat reprehenderit proident quis eiusmod cillum sint dolore ut duis. Voluptate qui Lorem voluptate proident."
+					href=""
+					link="Visit our showroom"
+					type="image"
+				/>
+			</div>
 		</div>
 	),
 };
@@ -179,41 +219,51 @@ export const RepeatingGrid: Story = {
 export const RepeatingFlex: Story = {
 	render: (props: PropsType) => (
 		<div className="repeating-flex">
-			<Card
-				title="Enim amet velit laboris"
-				description="Aliquip occaecat do Lorem labore veniam proident veniam. Amet nostrud incididunt in cupidatat consectetur veniam ullamco ullamco mollit officia excepteur id quis."
-				href=""
-				link="Learn more about us"
-				type="default"
-			/>
-			<Card
-				title="Laboris eiusmod labore"
-				description="Ad aliqua dolor irure cupidatat. Ullamco voluptate consequat consectetur ut id tempor ut officia magna."
-				href=""
-				link="Download our whitepaper"
-				type="default"
-			/>
-			<Card
-				title="Veniam consectetur eiusmod ad id"
-				description="In cupidatat reprehenderit proident quis eiusmod cillum sint dolore ut duis. Voluptate qui Lorem voluptate proident."
-				href=""
-				link="Visit our showroom"
-				type="outline"
-			/>
-			<Card
-				title="Veniam consectetur eiusmod ad id"
-				description="In cupidatat reprehenderit proident quis eiusmod cillum sint dolore ut duis. Voluptate qui Lorem voluptate proident."
-				href=""
-				link="Visit our showroom"
-				type="outline"
-			/>
-			<Card
-				title="Veniam consectetur eiusmod ad id"
-				description="In cupidatat reprehenderit proident quis eiusmod cillum sint dolore ut duis. Voluptate qui Lorem voluptate proident."
-				href=""
-				link="Visit our showroom"
-				type="outline"
-			/>
+			<div>
+				<Card
+					title="Enim amet velit laboris"
+					description="Aliquip occaecat do Lorem labore veniam proident veniam. Amet nostrud incididunt in cupidatat consectetur veniam ullamco ullamco mollit officia excepteur id quis."
+					href=""
+					link="Learn more about us"
+					type="image"
+				/>
+			</div>
+			<div>
+				<Card
+					title="Laboris eiusmod labore"
+					description="Ad aliqua dolor irure cupidatat. Ullamco voluptate consequat consectetur ut id tempor ut officia magna."
+					href=""
+					link="Download our whitepaper"
+					type="image"
+				/>
+			</div>
+			<div>
+				<Card
+					title="Veniam consectetur eiusmod ad id"
+					description="In cupidatat reprehenderit proident quis eiusmod cillum sint dolore ut duis. Voluptate qui Lorem voluptate proident."
+					href=""
+					link="Visit our showroom"
+					type="image"
+				/>
+			</div>
+			<div>
+				<Card
+					title="Veniam consectetur eiusmod ad id"
+					description="In cupidatat reprehenderit proident quis eiusmod cillum sint dolore ut duis. Voluptate qui Lorem voluptate proident."
+					href=""
+					link="Visit our showroom"
+					type="image"
+				/>
+			</div>
+			<div>
+				<Card
+					title="Veniam consectetur eiusmod ad id"
+					description="In cupidatat reprehenderit proident quis eiusmod cillum sint dolore ut duis. Voluptate qui Lorem voluptate proident."
+					href=""
+					link="Visit our showroom"
+					type="image"
+				/>
+			</div>
 		</div>
 	),
 };
@@ -223,38 +273,38 @@ export const SubGridRows: Story = {
 		<div className="repeating-grid subgrid-rows">
 			<Card
 				title="Enim amet velit laboris"
-				description="Aliquip occaecat do Lorem labore veniam proident veniam. Amet nostrud incididunt in cupidatat consectetur venia."
+				description="Aliquip occaecat do Lorem labore veniam proident veniam. Amet nostrud incididunt in cupidatat consectetur veniam ullamco ullamco mollit officia excepteur id quis."
 				href=""
 				link="Learn more about us"
-				type="default"
+				type="image"
 			/>
 			<Card
 				title="Laboris eiusmod labore"
 				description="Ad aliqua dolor irure cupidatat. Ullamco voluptate consequat consectetur ut id tempor ut officia magna."
 				href=""
 				link="Download our whitepaper"
-				type="default"
-			/>
-			<Card
-				title="Veniam consectetur eiusmod"
-				description="In cupidatat reprehenderit proident quis eiusmod cillum sint dolore ut duis. Voluptate qui Lorem voluptate proident."
-				href=""
-				link="Visit our showroom"
-				type="outline"
+				type="image"
 			/>
 			<Card
 				title="Veniam consectetur eiusmod ad id"
 				description="In cupidatat reprehenderit proident quis eiusmod cillum sint dolore ut duis. Voluptate qui Lorem voluptate proident."
 				href=""
 				link="Visit our showroom"
-				type="outline"
+				type="image"
 			/>
 			<Card
 				title="Veniam consectetur eiusmod ad id"
 				description="In cupidatat reprehenderit proident quis eiusmod cillum sint dolore ut duis. Voluptate qui Lorem voluptate proident."
 				href=""
 				link="Visit our showroom"
-				type="outline"
+				type="image"
+			/>
+			<Card
+				title="Veniam consectetur eiusmod ad id"
+				description="In cupidatat reprehenderit proident quis eiusmod cillum sint dolore ut duis. Voluptate qui Lorem voluptate proident."
+				href=""
+				link="Visit our showroom"
+				type="image"
 			/>
 		</div>
 	),

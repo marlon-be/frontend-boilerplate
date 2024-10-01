@@ -48,7 +48,7 @@
 	h2,
 	.h2 {
 		margin-bottom: var(--spacing-5);
-		font-size: 2.8rem;
+		font-size: 2rem;
 		line-height: 1.3;
 		font-family: var(--font-family-heading);
 	}
@@ -57,7 +57,7 @@
 	.h3 {
 		margin-bottom: var(--spacing-4);
 		font-weight: 600;
-		font-size: 2.25rem;
+		font-size: 1.8rem;
 		font-family: var(--font-family-heading);
 	}
 
@@ -65,7 +65,7 @@
 	.h4 {
 		margin-bottom: var(--spacing-3);
 		font-weight: 600;
-		font-size: 2rem;
+		font-size: 1.6rem;
 	}
 
 	.lead,
