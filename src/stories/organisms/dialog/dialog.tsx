@@ -12,7 +12,14 @@ export type DialogProps = {
 	children: ReactNode;
 };
 
-const Dialog: React.FC<DialogProps> = ({ type, isOpen, onClose, dialogTitle, children, className }) => {
+const Dialog: React.FC<DialogProps> = ({
+	type,
+	isOpen,
+	onClose,
+	dialogTitle = 'This is a dialog',
+	children,
+	className,
+}) => {
 	const dialogRef = useRef<HTMLDialogElement>(null);
 
 	useEffect(() => {
@@ -55,7 +62,7 @@ const Dialog: React.FC<DialogProps> = ({ type, isOpen, onClose, dialogTitle, chi
 		<dialog ref={dialogRef} className={dialogClassName}>
 			<header className="dialog__header">
 				{dialogTitle && <h2 className="h4">{dialogTitle}</h2>}
-				<button className="close button--clean" onClick={onClose}>
+				<button className={cn('close button--clean', !dialogTitle && 'end')} onClick={onClose}>
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
 						fill="none"

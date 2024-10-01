@@ -18,7 +18,7 @@ const Template: StoryFn<DialogProps> = (args) => {
 			<button className="button" onClick={openDialog}>
 				Open Dialog
 			</button>
-			<Dialog {...args} isOpen={isOpen} dialogTitle={'Title of this dialog'} onClose={closeDialog}>
+			<Dialog {...args} isOpen={isOpen} onClose={closeDialog}>
 				<main className="dialog__content">
 					<p>
 						This is a dialog content. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras
