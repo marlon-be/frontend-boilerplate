@@ -16,6 +16,7 @@ pnpm-debug.log*
 
 # macOS-specific files
 .DS_Store
+.idea/
 
 # storybook
 *storybook.log

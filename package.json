@@ -11,12 +11,11 @@
   },
   "dependencies": {
     "clsx": "^2.1.1",
-    "postcss-custom-media": "^10.0.0",
-    "prettier-plugin-css-order": "^2.1.2",
     "react": "^18.3.1"
   },
   "devDependencies": {
     "@chromatic-com/storybook": "^1.5.0",
+    "@lehoczky/postcss-fluid": "^1.0.3",
     "@storybook/addon-essentials": "^8.1.5",
     "@storybook/addon-interactions": "^8.1.5",
     "@storybook/addon-links": "^8.1.5",
@@ -27,12 +26,18 @@
     "@storybook/react-webpack5": "^8.1.5",
     "@storybook/test": "^8.1.5",
     "chokidar-cli": "^3.0.0",
+    "cssnano": "^7.0.6",
     "postcss": "^8.4.39",
     "postcss-cli": "^9.1.0",
+    "postcss-combine-duplicated-selectors": "^10.0.3",
+    "postcss-custom-media": "^10.0.0",
     "postcss-easy-import": "^4.0.0",
     "postcss-import": "^16.1.0",
     "postcss-merge-rules": "^7.0.0",
+    "postcss-merge-rules-plus": "^2.0.0",
+    "postcss-preset-env": "^10.0.5",
     "prettier": "^3.2.5",
+    "prettier-plugin-css-order": "^2.1.2",
     "prop-types": "^15.8.1",
     "storybook": "^8.1.5"
   }

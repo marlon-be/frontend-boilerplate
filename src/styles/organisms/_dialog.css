@@ -1,0 +1,128 @@
+@layer organisms.dialog {
+	@supports selector(:has(+ *)) {
+		body:has(dialog[open]) {
+			overflow: hidden;
+		}
+	}
+
+	.dialog {
+		--dialog-max-width: 600px;
+		--dialog-padding-x: 1.5rem;
+		--dialog-padding-y: 0.5rem;
+		--dialog-border-radius: 0.5rem;
+		--sidepanel-max-width: min(60ch - var(--dialog-padding-x), 100%);
+
+		width: 100%;
+		max-width: var(--dialog-max-width);
+		padding: 0;
+		translate: 0 30%;
+		border: 1px solid var(--color-neutral-500);
+		border-radius: var(--dialog-border-radius);
+		background: var(--color-neutral-000);
+		box-shadow:
+			rgba(0, 0, 0, 0.3) 0px 19px 38px,
+			rgba(0, 0, 0, 0.22) 0px 15px 12px;
+		opacity: 0;
+		@supports (transition-behavior: allow-discrete) {
+			transition-behavior: allow-discrete;
+			transition-duration: 0.8s;
+			transition-property: opacity, translate, overlay, display;
+		}
+		&::backdrop {
+			background-color: rgba(0, 0, 0, 0.3);
+			cursor: pointer;
+			opacity: 0;
+			@supports (transition-behavior: allow-discrete) {
+				transition-behavior: allow-discrete;
+				transition-duration: 1s;
+				transition-property: opacity, translate, overlay;
+			}
+		}
+		&[open] {
+			translate: 0 0;
+			opacity: 1;
+			&::backdrop {
+				opacity: 0.8;
+			}
+		}
+	}
+
+	@supports (transition-behavior: allow-discrete) {
+		@starting-style {
+			.dialog[open]::backdrop {
+				opacity: 0;
+			}
+
+			.dialog[open] {
+				translate: 0 -30%;
+				opacity: 0;
+			}
+		}
+	}
+
+	.dialog__header {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: var(--dialog-padding-y) var(--dialog-padding-x);
+		border-block-end: 1px solid var(--color-neutral-100);
+		.close {
+			margin-block-start: 0.5rem;
+		}
+	}
+
+	.dialog__content {
+		padding: var(--dialog-padding-y) var(--dialog-padding-x);
+	}
+
+	.dialog__footer {
+		padding: var(--dialog-padding-y) var(--dialog-padding-x);
+		border-block-start: 1px solid var(--color-neutral-100);
+	}
+
+	.dialog--sidepanel {
+		max-width: var(--sidepanel-max-width);
+		height: 100dvh;
+		min-height: 100dvh;
+		margin: 0;
+		inset-block: 0;
+		inset-inline: 0 auto;
+		overflow-y: auto;
+		translate: -100% 0;
+		border-radius: 0 var(--dialog-border-radius) var(--dialog-border-radius)
+			0;
+		opacity: 1;
+		&[open] {
+			translate: 0;
+			@supports (transition-behavior: allow-discrete) {
+				@starting-style {
+					translate: -100% 0;
+					opacity: 1;
+					&::backdrop {
+						opacity: 0;
+					}
+				}
+			}
+		}
+	}
+
+	.dialog--sidepanel.end {
+		inset-inline: auto 0;
+		translate: 100% 0;
+		border-radius: var(--dialog-border-radius) 0 0
+			var(--dialog-border-radius);
+		opacity: 1;
+		&[open] {
+			translate: 0;
+			@supports (transition-behavior: allow-discrete) {
+				@starting-style {
+					translate: 100% 0;
+					opacity: 1;
+					&::backdrop {
+						opacity: 0;
+					}
+				}
+			}
+		}
+	}
+}

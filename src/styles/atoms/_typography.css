@@ -30,7 +30,7 @@
 	:root {
 		--font-family-base: "Montserrat", Helvetica, sans-erif;
 		--font-family-heading: "Montserrat", times, serif;
-		--font-size-base: var(--16px);
+		--font-size-base: 1rem;
 		--line-height-base: 1.5;
 	}
 }
@@ -48,7 +48,7 @@
 	h2,
 	.h2 {
 		margin-bottom: var(--spacing-5);
-		font-size: var(--30px);
+		font-size: 2.8rem;
 		line-height: 1.3;
 		font-family: var(--font-family-heading);
 	}
@@ -57,7 +57,7 @@
 	.h3 {
 		margin-bottom: var(--spacing-4);
 		font-weight: 600;
-		font-size: var(--24px);
+		font-size: 2.25rem;
 		font-family: var(--font-family-heading);
 	}
 
@@ -65,14 +65,14 @@
 	.h4 {
 		margin-bottom: var(--spacing-3);
 		font-weight: 600;
-		font-size: var(--23px);
+		font-size: 2rem;
 	}
 
 	.lead,
 	.lead p {
 		margin-bottom: var(--spacing-3);
-		color: var(--color-grey-700);
-		font-size: var(--20px);
+		color: var(--color-neutral-700);
+		font-size: 2rem;
 		line-height: 1.6;
 	}
 

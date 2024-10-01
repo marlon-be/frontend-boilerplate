@@ -1,4 +1,4 @@
-import { Meta, Story } from '@storybook/react';
+import { Meta, StoryFn } from '@storybook/react';
 import Alert, { AlertProps } from './alert';
 
 export default {
@@ -7,15 +7,19 @@ export default {
 	argTypes: {
 		type: {
 			control: 'select',
-			options: ['success', 'danger', 'warning', 'info'],
+			options: ['base', 'success', 'danger', 'warning', 'info'],
+		},
+		hasClose: {
+			control: 'boolean',
 		},
 	},
 } as Meta;
 
-const Template: Story<AlertProps> = (args) => <Alert {...args} />;
+const Template: StoryFn<AlertProps> = (args) => <Alert {...args} />;
 
 export const DefaultAlert = Template.bind({});
 DefaultAlert.args = {
-	type: 'default',
+	type: 'base',
+	hasClose: false,
 	children: 'This is an alert, change option to bottom to view all.',
 };

@@ -18,15 +18,15 @@
 		color: var(--icon-color, inherit);
 	}
 
-	.icon-sm {
+	.icon--sm {
 		--icon-size: var(--icon-size-sm);
 	}
 
-	.icon-lg {
+	.icon--lg {
 		--icon-size: var(--icon-size-lg);
 	}
 
-	.icon-xl {
+	.icon--xl {
 		--icon-size: var(--icon-size-xl);
 	}
 }

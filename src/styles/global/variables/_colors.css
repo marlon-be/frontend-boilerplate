@@ -1,6 +1,5 @@
 @layer theme {
 	:root {
-		--color-lightest: beige;
 		--color-primary: darkcyan;
 		--color-primary-light: mediumaquamarine;
 		--color-secondary: deeppink;
@@ -22,10 +21,11 @@
 		--color-success: green;
 		--color-warning: goldenrod;
 		--color-error: indianred;
+		--color-info: aquamarine;
 
 		/* Theme colors used */
 		--accent-color: var(--color-primary);
-		--color-background: var(--color-lightest);
-		--color-text: var(--color-darkest);
+		--color-background: var(--color-neutral-000);
+		--color-text: var(--color-neutral-700);
 	}
 }

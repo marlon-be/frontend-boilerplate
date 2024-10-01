@@ -20,6 +20,7 @@
 
 /* Organisms */
 @import "organisms/_card.css";
+@import "organisms/_dialog.css";
 @import "organisms/_header.css";
 
 /* Templates */

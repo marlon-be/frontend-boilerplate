@@ -218,12 +218,12 @@ export const RepeatingFlex: Story = {
 	),
 };
 
-export const SubGrid: Story = {
+export const SubGridRows: Story = {
 	render: (props: PropsType) => (
 		<div className="repeating-grid subgrid-rows">
 			<Card
 				title="Enim amet velit laboris"
-				description="Aliquip occaecat do Lorem labore veniam proident veniam. Amet nostrud incididunt in cupidatat consectetur veniam ullamco ullamco mollit officia excepteur id quis."
+				description="Aliquip occaecat do Lorem labore veniam proident veniam. Amet nostrud incididunt in cupidatat consectetur venia."
 				href=""
 				link="Learn more about us"
 				type="default"
@@ -236,7 +236,7 @@ export const SubGrid: Story = {
 				type="default"
 			/>
 			<Card
-				title="Veniam consectetur eiusmod ad smod ad id Veniam consectetur eiusmod ad id"
+				title="Veniam consectetur eiusmod"
 				description="In cupidatat reprehenderit proident quis eiusmod cillum sint dolore ut duis. Voluptate qui Lorem voluptate proident."
 				href=""
 				link="Visit our showroom"

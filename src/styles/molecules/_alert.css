@@ -15,20 +15,31 @@
 			inset-block-start: var(--alert-padding-y);
 			inset-inline-end: var(--alert-padding-x);
 		}
+		@supports selector(:has(+ *)) {
+			&:has(.close) {
+				padding-inline-end: calc(
+					(var(--alert-padding-x) * 2) + var(--icon-size-md)
+				);
+			}
+		}
 	}
 
 	.alert--success {
 		--background: var(--color-success);
-		--color: var(--color-lightest);
+		--color: var(--color-neutral-000);
 	}
 
 	.alert--warning {
 		--background: var(--color-warning);
-		--color: var(--color-lightest);
+		--color: var(--color-neutral-000);
 	}
 
 	.alert--error {
 		--background: var(--color-error);
-		--color: var(--color-lightest);
+		--color: var(--color-neutral-000);
+	}
+
+	.alert--info {
+		--background: var(--color-info);
 	}
 }
