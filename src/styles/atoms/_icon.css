@@ -29,4 +29,8 @@
 	.icon--xl {
 		--icon-size: var(--icon-size-xl);
 	}
+
+	.icon--cap {
+		--icon-size: 1cap;
+	}
 }

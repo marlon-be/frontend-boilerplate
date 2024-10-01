@@ -1,8 +1,8 @@
 @charset "UTF-8";
 
+@import "global/_mediaqueries.css";
 @import "global/_layers.css";
 @import "global/_reset.css";
-@import "global/_mediaqueries.css";
 
 /* Variables */
 @import "global/variables/_colors.css";

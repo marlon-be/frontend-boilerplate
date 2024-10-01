@@ -5,6 +5,9 @@ import Dialog, { DialogProps } from './dialog';
 export default {
 	title: 'Organisms/Dialog',
 	component: Dialog,
+	parameters: {
+		layout: 'centered',
+	},
 } as Meta;
 
 const Template: StoryFn<DialogProps> = (args) => {
