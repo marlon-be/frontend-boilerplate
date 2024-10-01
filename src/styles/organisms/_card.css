@@ -70,8 +70,9 @@
 		@container grid-item (min-width: 500px) {
 			display: grid;
 			grid-template-columns: 1fr 2fr;
+			column-gap: 4cqmax;
+			row-gap: 1cqmin;
 			grid-row: auto / span 4;
-			gap: 1rem;
 			img {
 				grid-row: auto / span 3;
 				aspect-ratio: auto;

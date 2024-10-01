@@ -128,8 +128,6 @@ export const FluidFlex: Story = {
 				<Card
 					title="Laboris eiusmod labore"
 					description="Ad aliqua dolor irure cupidatat. Ullamco voluptate consequat consectetur ut id tempor ut officia magna."
-					href=""
-					link="Download our whitepaper"
 					type="image"
 				/>
 			</div>
