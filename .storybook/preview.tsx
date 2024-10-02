@@ -1,7 +1,8 @@
-import type { Preview } from "@storybook/react";
+import React from 'react';
+import type { Preview } from '@storybook/react';
+import SpriteSheet from '../src/stories/atoms/icons/sprite-sheet'; // Import the SpriteSheet component
 
-import "./css/overrides.css";
-// import '../storybook-static/css/main.css';
+import './css/overrides.css';
 import '../dist/storybook/css/main.css';
 
 const preview: Preview = {
@@ -16,6 +17,14 @@ const preview: Preview = {
 			},
 		},
 	},
+	decorators: [
+		(Story: any) => (
+			<div>
+				<SpriteSheet /> {/* Icons */}
+				<Story />
+			</div>
+		),
+	],
 };
 
 export default preview;

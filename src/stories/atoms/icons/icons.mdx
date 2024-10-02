@@ -1,19 +1,24 @@
-
-import { Meta, IconGallery, IconItem } from '@storybook/blocks';
-
-import * as Icons from '@storybook/icons';
+import { IconGallery, IconItem, Meta } from "@storybook/blocks";
+import Icon, { IconNames } from "./icon";
+import SpriteSheet from "./sprite-sheet";
 
 <Meta title="Icons" />
+<SpriteSheet />
 
 # Icons
 
-This should get updated to a system we can use
+## Usage
+
+```
+<Icon name="download" />
+```
+
+## Available icons
 
 <IconGallery>
-	<IconItem name="Plus">
-		<Icons.AddIcon />
-	</IconItem>
-	<IconItem name="Close">
-		<Icons.CloseIcon />
-	</IconItem>
+	{IconNames.map((iconName) => (
+		<IconItem name={iconName}>
+			<Icon name={iconName} />
+		</IconItem>
+	))}
 </IconGallery>

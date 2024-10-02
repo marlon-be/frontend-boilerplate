@@ -1,4 +1,5 @@
 import { cn } from '../../../js/utils/style';
+import 'container-query-polyfill';
 import Button from '../../molecules/button/button';
 
 export interface PropsType {

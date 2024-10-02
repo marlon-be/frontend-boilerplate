@@ -1,6 +1,7 @@
 // NativeDialog.tsx
 import React, { useRef, useEffect, ReactNode, useCallback } from 'react';
 import { cn } from '../../../js/utils/style';
+import Icon from '../../atoms/icons/icon';
 export type DialogType = 'default' | 'sidepanel-start' | 'sidepanel-end';
 
 export type DialogProps = {
@@ -63,21 +64,7 @@ const Dialog: React.FC<DialogProps> = ({
 			<header className="dialog__header">
 				{dialogTitle && <h2 className="h4">{dialogTitle}</h2>}
 				<button className={cn('close button--clean', !dialogTitle && 'end')} onClick={onClose}>
-					<svg
-						xmlns="http://www.w3.org/2000/svg"
-						fill="none"
-						viewBox="0 0 24 24"
-						strokeWidth="1.5"
-						stroke="currentColor"
-						className="icon"
-						aria-hidden="true"
-					>
-						<path
-							strokeLinecap="round"
-							strokeLinejoin="round"
-							d="m9.75 9.75 4.5 4.5m0-4.5-4.5 4.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
-						/>
-					</svg>
+					<Icon name="close" />
 					<span className={'sr-only'}>Close dialog</span>
 				</button>
 			</header>
