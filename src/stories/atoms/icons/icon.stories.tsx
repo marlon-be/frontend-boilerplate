@@ -1,5 +1,17 @@
-import { Meta, StoryFn } from '@storybook/react';
-import Icon, { IconProps, IconNames } from './icon';
+import { Meta, StoryObj } from '@storybook/react';
+import Icon, { IconProps, ICON_NAMES } from './icon';
+
+type Story = StoryObj<IconProps>;
+
+export const Default: Story = {
+	render: (args) => {
+		return <Icon {...args} />;
+	},
+	args: {
+		size: 'medium',
+		name: ICON_NAMES[0],
+	},
+};
 
 export default {
 	component: Icon,
@@ -7,22 +19,13 @@ export default {
 	argTypes: {
 		size: {
 			control: 'select',
-			options: ['sm', 'md', 'lg', 'xl'],
 		},
 		name: {
 			control: 'select',
-			options: IconNames,
+			options: ICON_NAMES,
 		},
 	},
 	parameters: {
 		layout: 'centered',
 	},
-} as Meta;
-
-const Template: StoryFn<IconProps> = (args) => <Icon {...args} />;
-
-export const DefaultAlert = Template.bind({});
-DefaultAlert.args = {
-	size: 'md',
-	name: IconNames[1],
-};
+} satisfies Meta;

@@ -1,8 +1,8 @@
 import { type SVGProps } from 'react';
-import { type ArrayValue } from '~/types';
+import { type ArrayValue } from '../../../js/types';
 import { cn } from '../../../js/utils/style';
 
-export const IconNames: ArrayValue<string> = [
+export const ICON_NAMES = [
 	'add',
 	'arrow-right',
 	'arrow-up',
@@ -26,12 +26,12 @@ export const IconNames: ArrayValue<string> = [
 	'instagram',
 	'user',
 	'external',
-];
+] as const;
 
-export type IconName = (typeof IconNames)[];
+export type IconName = ArrayValue<typeof ICON_NAMES>;
 export type IconSize = 'sm' | 'md' | 'lg' | 'xl';
 
-export type IconProps = Omit<SVGProps<SVGSVGElement>, 'children'> & { name: IconName; size: IconSize };
+export type IconProps = Omit<SVGProps<SVGSVGElement>, 'children'> & { name: IconName; size?: IconSize };
 
 export default function Icon({ name, size = 'md', className, ...props }: IconProps) {
 	const iconClassName = cn('icon', className, {

@@ -1,5 +1,18 @@
-import { Meta, StoryFn } from '@storybook/react';
+import { Meta, StoryObj } from '@storybook/react';
 import Alert, { AlertProps } from './alert';
+
+type Story = StoryObj<AlertProps>;
+
+export const Default: Story = {
+	render: (args) => {
+		return <Alert {...args} />;
+	},
+	args: {
+		type: 'base',
+		hasClose: false,
+		children: 'This is an alert, change option to bottom to view all.',
+	},
+};
 
 export default {
 	component: Alert,
@@ -7,19 +20,9 @@ export default {
 	argTypes: {
 		type: {
 			control: 'select',
-			options: ['base', 'success', 'danger', 'warning', 'info'],
 		},
 		hasClose: {
 			control: 'boolean',
 		},
 	},
-} as Meta;
-
-const Template: StoryFn<AlertProps> = (args) => <Alert {...args} />;
-
-export const DefaultAlert = Template.bind({});
-DefaultAlert.args = {
-	type: 'base',
-	hasClose: false,
-	children: 'This is an alert, change option to bottom to view all.',
-};
+} satisfies Meta;

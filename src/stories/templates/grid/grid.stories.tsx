@@ -2,7 +2,6 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { type HTMLAttributes } from 'react';
 import Component from './grid';
 import Card from '../../organisms/card/card';
-import CardProduct from '../../organisms/card/card-product';
 
 type Story = StoryObj<typeof Component>;
 

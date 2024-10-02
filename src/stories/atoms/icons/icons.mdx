@@ -1,5 +1,5 @@
 import { IconGallery, IconItem, Meta } from "@storybook/blocks";
-import Icon, { IconNames } from "./icon";
+import Icon, { ICON_NAMES } from "./icon";
 import SpriteSheet from "./sprite-sheet";
 
 <Meta title="Icons" />
@@ -16,7 +16,7 @@ import SpriteSheet from "./sprite-sheet";
 ## Available icons
 
 <IconGallery>
-	{IconNames.map((iconName) => (
+	{ICON_NAMES.map((iconName) => (
 		<IconItem name={iconName}>
 			<Icon name={iconName} />
 		</IconItem>
