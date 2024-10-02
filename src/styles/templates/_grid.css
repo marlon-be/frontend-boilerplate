@@ -1,6 +1,6 @@
 @layer theme {
 	:root {
-		--layout-fluid-min: 35ch;
+		--layout-default-fluid-min: 35ch;
 		--layout-default-repeat: 3;
 		--layout-default-gap: 3vmax;
 	}
@@ -17,11 +17,11 @@ AVAILABLE CLASSES AND VARS:
    --flex-gap -> Define gap
 
 - fluid-grid
-   --fluid-grid-min -> Define min-size
+   --grid-fluid-min -> Define min-size
    --grid-gap -> Define gap
 
 --fluid-flex
-   --fluid-flex-min -> Define min-size
+   --flex-fluid-min -> Define min-size
    --flex-gap -> Define gap
 *************************/
 
@@ -35,7 +35,7 @@ AVAILABLE CLASSES AND VARS:
 	}
 
 	/* Repeating grid and flexbox */
-	.repeating-grid {
+	.grid-repeat {
 		--_grid-repeat: var(--grid-repeat, var(--layout-default-repeat));
 		--_repeating-grid-gap: var(--grid-gap, var(--layout-default-gap));
 		display: grid;
@@ -43,7 +43,7 @@ AVAILABLE CLASSES AND VARS:
 		gap: var(--_repeating-grid-gap);
 	}
 
-	.repeating-flex {
+	.flex-repeat {
 		--_flex-repeat: var(--flex-repeat, var(--layout-default-repeat));
 		--_repeating-flex-gap: var(--flex-gap, var(--layout-default-gap));
 		--_gap-count: calc(var(--_flex-repeat) - 1);
@@ -61,8 +61,11 @@ AVAILABLE CLASSES AND VARS:
 	}
 
 	/* Fluid grid and flexbox */
-	.fluid-grid {
-		--_fluid-grid-min: var(--fluid-grid-min, var(--layout-fluid-min));
+	.grid-fluid {
+		--_fluid-grid-min: var(
+			--grid-fluid-min,
+			var(--layout-default-fluid-min)
+		);
 		--_fluid-grid-gap: var(--grid-gap, var(--layout-default-gap));
 
 		display: grid;
@@ -73,8 +76,11 @@ AVAILABLE CLASSES AND VARS:
 		gap: var(--_fluid-grid-gap);
 	}
 
-	.fluid-flex {
-		--_fluid-flex-min: var(--fluid-flex-min, var(--layout-fluid-min));
+	.flex-fluid {
+		--_fluid-flex-min: var(
+			--flex-fluid-min,
+			var(--layout-default-fluid-min)
+		);
 		--_fluid-flex-gap: var(--flex-gap, var(--layout-default-gap));
 
 		display: flex;
@@ -126,10 +132,10 @@ AVAILABLE CLASSES AND VARS:
 
 	@supports (container: inline-size) {
 		:is(
-				.fluid-grid:not(.subgrid-rows),
-				.repeating-grid:not(.subgrid-rows),
-				.repeating-flex,
-				.fluid-flex
+				.grid-fluid:not(.subgrid-rows),
+				.grid-repeat:not(.subgrid-rows),
+				.flex-repeat,
+				.flex-fluid
 			)
 			> * {
 			container: var(--grid-item-container, grid-item) / inline-size;
