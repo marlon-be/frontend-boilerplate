@@ -1,0 +1,38 @@
+import { IconGallery, IconItem, Meta } from "@storybook/blocks";
+import Icon, { ICON_NAMES } from "./icon";
+import SpriteSheet from "./sprite-sheet";
+
+<Meta title="Atoms/Icon" />
+<SpriteSheet />
+
+# Icons
+
+## Variable info
+Sizes of Icons are exposed in the theme layer, this makes it handy for size calculations in components using icons:
+
+```css
+@layer theme {
+	:root {
+		--icon-size-sm: 0.75rem;
+		--icon-size-md: 1.5rem;
+		--icon-size-lg: 2.25rem;
+		--icon-size-xl: 3rem;
+	}
+}
+```
+
+## Usage
+
+```
+<Icon name="download" />
+```
+
+## Available icons
+
+<IconGallery>
+	{ICON_NAMES.map((iconName) => (
+		<IconItem name={iconName}>
+			<Icon name={iconName} />
+		</IconItem>
+	))}
+</IconGallery>
