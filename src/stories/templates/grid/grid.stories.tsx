@@ -59,7 +59,7 @@ export const BaseGrid: Story = {
 	),
 };
 
-export const FluidGrid: Story = {
+export const GridFluid: Story = {
 	render: (props: PropsType) => (
 		<div className="grid-fluid">
 			<div>
@@ -111,9 +111,9 @@ export const FluidGrid: Story = {
 	),
 };
 
-export const FluidFlex: Story = {
+export const FlexFluid: Story = {
 	render: (props: PropsType) => (
-		<div className="fluid-flex">
+		<div className="flex-fluid">
 			<div>
 				<Card
 					title="Enim amet velit laboris"
@@ -161,7 +161,7 @@ export const FluidFlex: Story = {
 	),
 };
 
-export const RepeatingGrid: Story = {
+export const GridRepeat: Story = {
 	render: (props: PropsType) => (
 		<div className="grid-repeat">
 			<div>
@@ -213,7 +213,7 @@ export const RepeatingGrid: Story = {
 	),
 };
 
-export const RepeatingFlex: Story = {
+export const FlexRepeat: Story = {
 	render: (props: PropsType) => (
 		<div className="flex-repeat">
 			<div>
