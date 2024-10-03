@@ -1,0 +1,144 @@
+@layer theme {
+	:root {
+		--layout-default-fluid-min: 35ch;
+		--layout-default-repeat: 3;
+		--layout-default-gap: 3vmax;
+	}
+}
+
+/**************************
+AVAILABLE CLASSES AND VARS:
+- repeating-grid
+   --grid-repeat -> Define repeat
+   --grid-gap -> Define gap
+
+- repeating-flex
+   --flex-repeat -> Define repeat
+   --flex-gap -> Define gap
+
+- fluid-grid
+   --grid-fluid-min -> Define min-size
+   --grid-gap -> Define gap
+
+--fluid-flex
+   --flex-fluid-min -> Define min-size
+   --flex-gap -> Define gap
+*************************/
+
+@layer templates {
+	/* for default grids */
+	.grid {
+		--_base-grid-gap: var(--grid-gap, var(--layout-default-gap));
+
+		display: grid;
+		gap: var(--_base-grid-gap);
+	}
+
+	/* Repeating grid and flexbox */
+	.grid-repeat {
+		--_grid-repeat: var(--grid-repeat, var(--layout-default-repeat));
+		--_repeating-grid-gap: var(--grid-gap, var(--layout-default-gap));
+		display: grid;
+		grid-template-columns: repeat(var(--_grid-repeat), 1fr);
+		gap: var(--_repeating-grid-gap);
+	}
+
+	.flex-repeat {
+		--_flex-repeat: var(--flex-repeat, var(--layout-default-repeat));
+		--_repeating-flex-gap: var(--flex-gap, var(--layout-default-gap));
+		--_gap-count: calc(var(--_flex-repeat) - 1);
+		--_gap-repeater-calc: calc(
+			var(--_repeating-flex-gap) / var(--_flex-repeat) * var(--_gap-count)
+		);
+
+		display: flex;
+		flex-wrap: wrap;
+		gap: var(--_repeating-flex-gap);
+		> * {
+			flex: 1 1
+				calc((100% / var(--_flex-repeat)) - var(--_gap-repeater-calc));
+		}
+	}
+
+	/* Fluid grid and flexbox */
+	.grid-fluid {
+		--_fluid-grid-min: var(
+			--grid-fluid-min,
+			var(--layout-default-fluid-min)
+		);
+		--_fluid-grid-gap: var(--grid-gap, var(--layout-default-gap));
+
+		display: grid;
+		grid-template-columns: repeat(
+			auto-fit,
+			minmax(min(var(--_fluid-grid-min), 100%), 1fr)
+		);
+		gap: var(--_fluid-grid-gap);
+	}
+
+	.flex-fluid {
+		--_fluid-flex-min: var(
+			--flex-fluid-min,
+			var(--layout-default-fluid-min)
+		);
+		--_fluid-flex-gap: var(--flex-gap, var(--layout-default-gap));
+
+		display: flex;
+		flex-wrap: wrap;
+		gap: var(--_fluid-flex-gap);
+		> * {
+			flex: 1 1 var(--_fluid-flex-min);
+		}
+	}
+
+	/*
+    SUBGRID
+    To use subgrid, this is currently scoped to about 4 rows maximum, but can easily be enhanced with the variable: --subgrid-rows
+    the gap can be manipulated by --subgrid-gap
+    NOTE: WHEN USING SUBRID CONTAINMENT GETS DISABLED (by design this was fail-proofed in the containers you find at the bottom)
+    */
+	@supports selector(:has(+ *)) {
+		/* Subgrid utility */
+		.subgrid-rows {
+			&:has(> :nth-child(1):last-child) {
+				--_subgrid-rows: 1;
+			}
+			&:has(> :nth-child(2):last-child) {
+				--_subgrid-rows: 2;
+			}
+			&:has(> :nth-child(3):last-child) {
+				--_subgrid-rows: 3;
+			}
+			&:has(> :nth-child(4):last-child) {
+				--_subgrid-rows: 4;
+			}
+
+			> * {
+				display: grid;
+				grid-template-rows: subgrid;
+				grid-row: auto / span
+					var(--subgrid-rows, var(--_subgrid-rows, 5));
+				gap: var(--subgrid-gap, 0);
+			}
+		}
+	}
+
+	/*
+    CONTAINER QUERIES
+    Each child is a container with the default name: "grid-item".
+    This can be overwritten with:
+    --grid-item-container
+    */
+
+	@supports (container: inline-size) {
+		:is(
+				.grid-fluid:not(.subgrid-rows),
+				.grid-repeat:not(.subgrid-rows),
+				.flex-repeat,
+				.flex-fluid
+			)
+			> * {
+			container: var(--grid-item-container, grid-item) / inline-size;
+		}
+	}
+}

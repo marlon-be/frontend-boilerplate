@@ -1,0 +1,85 @@
+import { Meta } from '@storybook/blocks';
+import * as BreakoutGridStories from './breakoutGrid.stories';
+
+<Meta of={BreakoutGridStories} />
+
+# Breakout Grid
+
+A breakout-grid is the ideal partner for fluid content pages with breakouts. This is based on a pattern by [Ryan Mulligan](https://ryanmulligan.dev/blog/layout-breakouts/) and there is a tool available for easy configuration at [Layout Breakouts Builder](https://layout-breakouts-builder.vercel.app/).
+
+A nice convention is to prefix your tracks with `grid`.
+
+## Basic usage
+
+In the default styles there are 3 tracks:
+
+- `.grid-full`
+- `.grid-content` The default, max width equals container max width by exposed custom property `--container-max-width`.
+- `.grid-popup`
+
+The track widths can be found in the following variables:
+
+```css
+/** TRACK WIDTHS **/
+--grid-full-max-width: 1fr;
+--grid-popout-max-width: 1400px;
+--grid-content-max-width: var(--container-max-width);
+```
+
+## Extended usage
+
+It is possible to extend the usage by choosing a start and end point, for example:
+
+```html
+<div className="grid-popout-start grid-full-end">
+	<strong>POPOUT TRACK START and FULL END</strong>
+</div>
+```
+
+Each of the tracks has a `-start` and `-end` suffix to do just that, full classlist:
+
+```css
+.grid-full {
+		grid-column: grid-full;
+	}
+	.grid-full-start {
+		grid-column-start: grid-full-start;
+	}
+	.grid-full-end {
+		grid-column-end: grid-full-end;
+	}
+
+	.grid-popout {
+		grid-column: grid-popout;
+	}
+	.grid-popout-start {
+		grid-column-start: grid-popout-start;
+	}
+	.grid-popout-end {
+		grid-column-end: grid-popout-end;
+	}
+
+	.grid-content {
+		grid-column: grid-content;
+	}
+	.grid-content-start {
+		grid-column-start: grid-content-start;
+	}
+	.grid-content-end {
+		grid-column-end: grid-content-end;
+	}
+
+	.full-width {
+		grid-column: full;
+	}
+	.full-content,
+	.full-content-nopad {
+		grid-column: full;
+	}
+	.full-content {
+		padding-inline: var(--minimum-content-padding);
+	}
+```
+
+This is a real flexible system to build your web pages and for documentation's sake, I tried to keep it as true as possible tot the [Layout Breakouts Builder](https://layout-breakouts-builder.vercel.app/).
+

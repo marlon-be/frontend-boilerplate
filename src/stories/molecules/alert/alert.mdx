@@ -1,0 +1,26 @@
+import { IconGallery, IconItem, Meta } from "@storybook/blocks";
+
+
+<Meta title="Molecules/Alert" />
+
+# Alert
+(Note that this is still a very basic alert with room to grow)
+
+## Variable info
+Sizes of Icons are exposed in the theme layer, this makes it handy for size calculations in components using icons:
+
+## Usage
+
+```
+<Alert type="success" />
+```
+
+## Close button
+
+In case an alert has a close button it can be the following:
+
+```
+<Alert type="success" hasClose />
+```
+
+The padding for the close button gets calculated based on the exposed icon width, find out more in the icons section.

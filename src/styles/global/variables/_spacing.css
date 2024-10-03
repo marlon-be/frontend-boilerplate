@@ -1,4 +1,4 @@
-@layer global {
+@layer theme {
 	:root {
 		--spacing-0: 0;
 		--spacing-1: 0.25rem; /* 4px */
@@ -13,15 +13,5 @@
 		--spacing-10: 8rem; /* 128px */
 		--spacing-11: 12rem; /* 192px */
 		--spacing-12: 16rem; /* 256px */
-
-		--default-column-gap: var(--spacing-5);
-
-		@media (--xl) {
-			--default-column-gap: var(--spacing-6);
-		}
-
-		@media (--xxl) {
-			--default-column-gap: var(--spacing-7);
-		}
 	}
 }

@@ -1,4 +1,4 @@
-@layer organisms {
+@layer organisms.card {
 	.card {
 		--card-background: var(--color-neutral-100);
 		--card-padding: var(--spacing-5);
@@ -42,5 +42,45 @@
 
 	.card--highlight {
 		--card-background: var(--color-neutral-200);
+	}
+
+	.card__content {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.card--image {
+		display: flex;
+		flex-direction: column;
+		min-height: 100%;
+		img {
+			aspect-ratio: 16 / 9;
+			inline-size: min-content;
+			margin-block: 0 1rem;
+			object-fit: cover;
+			border-radius: 0.5rem;
+		}
+		.card__actions {
+			margin-top: auto;
+		}
+		p {
+			display: none;
+			margin-block-end: 20px;
+		}
+		@container grid-item (min-width: 500px) {
+			display: grid;
+			grid-template-columns: 1fr 2fr;
+			column-gap: 4cqmax;
+			row-gap: 1cqmin;
+			grid-row: auto / span 4;
+			img {
+				grid-row: auto / span 3;
+				aspect-ratio: auto;
+				height: 100%;
+			}
+			p {
+				display: block;
+			}
+		}
 	}
 }

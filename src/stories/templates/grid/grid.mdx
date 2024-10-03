@@ -1,0 +1,246 @@
+import { Meta, Primary, Controls, Stories, Source } from '@storybook/blocks';
+import * as GridStories from './grid.stories';
+
+<Meta of={GridStories} />
+
+# Grid
+
+Grid uses CSS grid and flexbox for creating customizable layouts based on the requirements of your project.
+All CSS is completely up to you to decide. The main purpose is to create an easy to use, flexible system to build custom CSS upon.
+
+## Usage
+
+To make use of the grid, simply add the `.grid` classname, which is used to general make a grid.
+
+Use some of the more advanced classes to use some modern CSS techniques
+
+- `.grid-repeat` (a repeating CSS grid based on a custom property to specify amount of repeats)
+- `.flex-repeat` (a repeating CSS grid with flexbox based on a custom property to specify amount of repeats)
+- `.grid-fluid` (an equal column fluid grid with CSS Grid, based on a width limit)
+- `.flex-fluid` (an equal column fluid grid with flexbox, based on a width limit)
+
+## Defaults
+
+The defaults of the grid are the following:
+
+```css
+:root {
+	--layout-default-fluid-min: 35ch;
+	--layout-default-repeat: 3;
+	--layout-default-gap: 3vmax;
+}
+```
+
+**Note:** These defaults can of course be updated based on your project
+
+## Repeating grids
+
+Repeating grids are the most easy to understand. The default is set to `3` repeats and it can be used like this:
+
+```html
+<div class="grid-repeat">
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+</div>
+```
+
+In case you want to update column size of a certain grid you could add the following example:
+
+
+```html
+<div class="grid-repeat grid--content">
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+</div>
+```
+
+```css
+.grid--content {
+	--grid-repeat: 2;
+	@media (--xl) {
+		--grid-repeat: 3;
+		--grid-gap: 2vw;
+	}
+}
+```
+
+The same can be done with flexbox, If you want the items to grow based on the leftover columns, you could update the example above like so:
+
+```html
+<div class="flex-repeat grid--content">
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+</div>
+```
+
+```css
+.grid--content {
+	--flex-repeat: 2;
+	@media (--xl) {
+		--flex-repeat: 3;
+		--flex-gap: 2vw;
+	}
+}
+```
+
+The available options for `.grid-repeat` and `.flex-repeat` are the following:
+
+### Repeating-grid
+
+- `--grid-repeat` -> Define repeat
+- `--grid-gap` -> Define gap
+
+### Repeating-flex
+
+- `--flex-repeat` -> Define repeat
+- `--flex-gap` -> Define gap
+
+## Fluid grids
+
+A fluid grid will take a minimum column width into account, from the moment two columns (or more) of that minimum width can be placed next to each other (taking into account the gap), the grid will do so.
+This is based on the following formula:
+
+```css
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(35ch, 100%), 1fr));
+  gap: 3vmax;
+}
+```
+
+To overwrite the minimum size the following can be used:
+
+```html
+<div class="grid-fluid grid--content">
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+</div>
+```
+
+```css
+.grid--content {
+	--grid-fluid-min: 400px;
+	--grid-gap: 30px;
+}
+```
+
+The same can be done with flexbox, If you want the items to grow based on the leftover columns, you could update the example above like so:
+
+```html
+<div class="flex-fluid grid--content">
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+</div>
+```
+
+```css
+.grid--content {
+	--flex-fluid-min: 400px;
+	--flex-gap: 30px;
+}
+```
+
+The available options for `.grid-repeat` and `.flex-repeat` are the following:
+
+### Repeating-grid
+
+- `--grid-fluid-min` -> Define repeat
+- `--grid-gap` -> Define gap
+
+### Repeating-flex
+
+- `--flex-fluid-min` -> Define repeat
+- `--flex-gap` -> Define gap
+
+
+## An important note on custom layouts
+
+If you want to create custom grids, the suggestion is to use generic names for it. Identify the types of grids you need for your project, and choose sensible re-usable names for it.
+For example, if you have a content page (with sidebar), support page (sidebar + CTA column), and product browser (with filters in side column), you could provide these classes:
+
+```css
+.grid--content {
+}
+
+.grid--support {
+}
+
+.grid--browser {
+}
+```
+
+## Container queries
+
+Each direct child of a grid, apart from subgrid (more on that later) is a container with `container-name: --grid-item`. The `container-type` is set to `inline-size`.
+If you want the container name to be overwritten you can use the `--grid-item-container` custom property:
+
+Eg:
+
+```css
+.grid--content {
+	--flex-fluid-min: 400px;
+	--flex-gap: 30px;
+	--grid-item-container: --my-custom-name
+}
+```
+
+This means that in case of container query usage the following would give you the ability to style cards with container queries based on the grid's column:
+This example can be found with the image cards as illustration, this also uses the polyfill for container-queries supporting even Safari 15 and below.
+
+```html
+<div class="flex-fluid grid--content">
+	<div>
+		<article class="card"><!-- article card --></article>
+	</div>
+	<div>
+		<article class="card"><!-- article card --></article>
+	</div>
+	<div>
+		<article class="card"><!-- article card --></article>
+	</div>
+</div>
+```
+
+## Subgrid
+
+In case you want all items in a card to horizontally align to eachother there is the possibility to use subgrid.
+**As by design** subgrid does not work with container queries, so when using this class, container queries of direct children will be disabled. You will have to directly put in your cards to make the subgrid work.
+
+
+```html
+<div class="grid-fluid subgrid-rows">
+	<article class="card"><!-- article card --></article>
+	<article class="card"><!-- article card --></article>
+	<article class="card"><!-- article card --></article>
+	<article class="card"><!-- article card --></article>
+	<article class="card"><!-- article card --></article>
+</div>
+```
+
+There is an automatic detection of up to `4` subgrid rows with `:has()`. In case you need more or want to overrule the amount of children you could add the following:
+
+```html
+<div class="grid-fluid subgrid-rows grid--content">
+	<article class="card"><!-- article card --></article>
+	<article class="card"><!-- article card --></article>
+	<article class="card"><!-- article card --></article>
+	<article class="card"><!-- article card --></article>
+	<article class="card"><!-- article card --></article>
+</div>
+```
+
+```css
+.grid--content {
+	--subgrid-rows: 7;
+}
+```

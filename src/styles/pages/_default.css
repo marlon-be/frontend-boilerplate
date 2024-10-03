@@ -1,0 +1,15 @@
+/* Set the default body styles in the theme layer as this is the base */
+@layer theme {
+	body {
+		min-height: 100dvh;
+		background: var(--color-background);
+		color: var(--color-text);
+		font-size: var(--font-size-base);
+		line-height: var(--line-height-base);
+		font-family: var(--font-family-base);
+	}
+}
+
+@layer pages {
+	/* Add pages specific styles here, if really needed you could sublayer... but try to avoid */
+}
