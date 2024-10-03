@@ -10,7 +10,7 @@ export interface PropsType {
 	type?: 'base' | 'outline' | 'highlight' | 'image';
 }
 
-export default function Card({ title = 'Card title', description = 'Card description', href, link, type }: PropsType) {
+export default function Card({ title, description, href, link, type }: PropsType) {
 	const className = `card--${type}`;
 
 	return (

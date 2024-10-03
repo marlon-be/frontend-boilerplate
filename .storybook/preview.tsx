@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { FC } from 'react';
 import type { Preview } from '@storybook/react';
 import SpriteSheet from '../src/stories/atoms/icons/sprite-sheet'; // Import the SpriteSheet component
 
@@ -18,7 +18,7 @@ const preview: Preview = {
 		},
 	},
 	decorators: [
-		(Story: any) => (
+		(Story: FC) => (
 			<div>
 				<SpriteSheet /> {/* Icons */}
 				<Story />

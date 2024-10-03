@@ -1,4 +1,4 @@
-import React, { memo } from 'react';
+import { FC, memo, ReactNode } from 'react';
 import { cn } from '../../../js/utils/style';
 import Icon from '../../atoms/icons/icon';
 
@@ -6,12 +6,12 @@ export type AlertType = 'base' | 'success' | 'danger' | 'warning' | 'info';
 
 export interface AlertProps {
 	type?: AlertType;
-	children: React.ReactNode;
+	children: ReactNode;
 	hasClose?: boolean;
 	className?: string;
 }
 
-const Alert: React.FC<AlertProps> = memo(({ type = 'base', children, hasClose, className }) => {
+const Alert: FC<AlertProps> = memo(({ type = 'base', children, hasClose, className }) => {
 	const alertClassName = cn('alert', className, {
 		'alert--success': type === 'success',
 		'alert--error': type === 'danger',
