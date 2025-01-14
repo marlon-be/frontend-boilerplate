@@ -1,35 +1,40 @@
-import { FC, memo, ReactNode } from 'react';
-import { cn } from '../../../js/utils/style';
-import Icon from '../../atoms/icons/icon';
-
-export type AlertType = 'base' | 'success' | 'danger' | 'warning' | 'info';
+import { cva, type VariantProps } from "class-variance-authority";
+import { type HTMLAttributes, type PropsWithChildren, ReactNode } from "react";
+import Icon from "../../atoms/icons/icon";
+import { cn } from "../../../js/utils/style";
+import styles from "./alert.module.css";
 
 export interface AlertProps {
-	type?: AlertType;
-	children: ReactNode;
-	hasClose?: boolean;
-	className?: string;
+	dismissable?: boolean;
 }
 
-const Alert: FC<AlertProps> = memo(({ type = 'base', children, hasClose, className }) => {
-	const alertClassName = cn('alert', className, {
-		'alert--success': type === 'success',
-		'alert--error': type === 'danger',
-		'alert--warning': type === 'warning',
-		'alert--info': type === 'info',
-	});
+const alertVariants = cva(styles.alert, {
+	variants: {
+		variant: {
+			success: styles["alert--success"],
+			danger: styles["alert--error"],
+			warning: styles["alert--warning"],
+			info: styles["alert--info"],
+		},
+		defaultVariants: {
+			variant: "info",
+		},
+	},
+});
 
+type AlertVariants = VariantProps<typeof alertVariants>;
+
+export type Props = PropsWithChildren<HTMLAttributes<HTMLDivElement> & AlertVariants & AlertProps>;
+
+export default function Alert({ variant, children, dismissable, className }: Props) {
 	return (
-		<div className={alertClassName}>
+		<div className={alertVariants({ variant, className })}>
 			{children}
-			{hasClose && (
-				<button className="close button--clean">
-					<Icon name="close" />
-					<span className={'sr-only'}>Close</span>
+			{dismissable && (
+				<button className={cn(styles["alert__close"], "button--clean")} aria-label="Close">
+					<Icon variant="close" size="sm" />
 				</button>
 			)}
 		</div>
 	);
-});
-
-export default Alert;
+}
