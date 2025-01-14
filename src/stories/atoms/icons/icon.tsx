@@ -1,6 +1,8 @@
-import { type SVGProps } from 'react';
+import { cva, type VariantProps } from 'class-variance-authority';
+import { memo, type ComponentPropsWithRef } from 'react';
 import { type ArrayValue } from '../../../js/types';
 import { cn } from '../../../js/utils/style';
+import styles from './icon.module.css';
 
 export const ICON_NAMES = [
 	'add',
@@ -28,21 +30,32 @@ export const ICON_NAMES = [
 	'external',
 ] as const;
 
+const iconVariants = cva(styles.icon, {
+	variants: {
+		size: {
+			sm: styles['icon--sm'],
+			md: styles['icon--md'],
+			lg: styles['icon--lg'],
+			xl: styles['icon--xl'],
+		},
+	},
+	defaultVariants: {
+		size: 'md',
+	},
+});
+
 export type IconName = ArrayValue<typeof ICON_NAMES>;
-export type IconSize = 'sm' | 'md' | 'lg' | 'xl';
+export type IconProps = ComponentPropsWithRef<'svg'>;
+export type IconVariants = VariantProps<typeof iconVariants>;
 
-export type IconProps = Omit<SVGProps<SVGSVGElement>, 'children'> & { name: IconName; size?: IconSize };
+export type Props = IconProps & IconVariants & { variant: IconName };
 
-export default function Icon({ name, size = 'md', className, ...props }: IconProps) {
-	const iconClassName = cn('icon', className, {
-		'icon--sm': size === 'sm',
-		'icon--lg': size === 'lg',
-		'icon--xl': size === 'xl',
-	});
-
+function Icon({ variant, size, className, ...props }: Props) {
 	return (
-		<svg className={iconClassName} {...props}>
-			<use xlinkHref={`#${name}`} />
+		<svg className={iconVariants({ size, className })} {...props}>
+			<use xlinkHref={`#${variant}`} />
 		</svg>
 	);
 }
+
+export default memo(Icon);
