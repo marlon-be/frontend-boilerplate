@@ -3,7 +3,7 @@ import type { Preview } from "@storybook/react";
 import SpriteSheet from "../src/stories/atoms/icons/sprite-sheet"; // Import the SpriteSheet component
 
 import "./css/overrides.css";
-import "../dist/storybook/css/main.css";
+import "../src/styles/main.css";
 
 const preview: Preview = {
 	parameters: {

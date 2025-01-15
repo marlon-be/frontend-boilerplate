@@ -14,7 +14,6 @@
 @import "atoms/_section.css";
 
 /* Molecules */
-@import "molecules/_alert.css";
 @import "molecules/_button.css";
 
 /* Organisms */

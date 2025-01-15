@@ -30,6 +30,7 @@
 	:root {
 		--font-family-base: "Montserrat", Helvetica, sans-erif;
 		--font-family-heading: "Montserrat", times, serif;
+		--font-weight-bold: 700;
 		--font-size-base: 1rem;
 		--line-height-base: 1.5;
 	}
@@ -41,8 +42,16 @@
 	h3,
 	h4,
 	h5,
-	h6 {
+	h6,
+	.h1,
+	.h2,
+	.h3,
+	.h4,
+	.h5,
+	.h6 {
 		font-family: var(--font-family-heading);
+		font-weight: var(--font-weight-bold);
+
 		@supports selector(:has(+ *)) {
 			&:has(.icon) {
 				display: flex;
