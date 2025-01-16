@@ -1,0 +1,49 @@
+@layer molecules.alert {
+	.alert {
+		--alert-padding-x: var(--spacing-3);
+		--alert-padding-y: var(--spacing-2);
+		--_background: var(--background, var(--color-neutral-200));
+		--_color: var(--color, var(--color-darkest));
+
+		position: relative;
+        margin-block-end: var(--spacing-3);
+		padding: var(--alert-padding-y) var(--alert-padding-x);
+		border-radius: 5px;
+		background: var(--_background);
+		color: var(--_color);
+		
+        @supports selector(:has(+ *)) {
+			&:has(.alert__close) {
+				padding-inline-end: calc(
+					(var(--alert-padding-x) * 2) + var(--icon-size-md)
+				);
+			}
+		}
+	}
+
+    .alert__close {
+        position: absolute;
+        inset-block-start: var(--alert-padding-y);
+        inset-inline-end: var(--alert-padding-x);
+    }
+
+	.alert--success {
+		--background: var(--color-success-background);
+		--color: var(--color-success-foreground);
+	}
+
+	.alert--warning {
+		--background: var(--color-warning-background);
+		--color: var(--color-warning-foreground);
+	}
+
+	.alert--error {
+		--background: var(--color-error-background);
+		--color: var(--color-error-foreground);
+	}
+
+	.alert--info {
+		--background: var(--color-info-background);
+		--color: var(--color-info-foreground);
+	}
+}

@@ -1,5 +1,49 @@
-import { Meta, Title, Typeset } from '@storybook/blocks';
+import { Meta, Typeset, Story } from '@storybook/blocks';
+import * as HeadingStories from '../../atoms/typography/heading.stories';
 
 <Meta title="Typography" />
 
+export const typography = {
+	type: {
+		primary: '"Montserrat", Helvetica, sans-erif',
+	},
+	weight: {
+		regular: '400',
+		medium: '500',
+		bold: '700',
+	},
+	size: {
+		s1: 12,
+		s2: 14,
+		s3: 16,
+		m1: 20,
+		m2: 24,
+		m3: 28,
+		l1: 32,
+		l2: 40,
+		l3: 48,
+	},
+};
+
+export const SampleText = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.';
+
 # Typography
+
+**Font:** Montserrat
+
+**Weights:** 400(regular), 700(bold), 800(extrabold), 900(black)
+
+## Headings
+
+<Story of={HeadingStories.H1} />
+<Story of={HeadingStories.H2} />
+<Story of={HeadingStories.H3} />
+<Story of={HeadingStories.H4} />
+<Story of={HeadingStories.H5} />
+<Story of={HeadingStories.H6} />
+
+## Headings using classNames
+
+<Story of={HeadingStories.H1AsClass} />
+<Story of={HeadingStories.H2AsClass} />
+<Story of={HeadingStories.H3AsClass} />

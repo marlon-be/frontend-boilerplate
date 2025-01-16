@@ -1,13 +1,14 @@
+import React, { FC } from "react";
 import type { Preview } from "@storybook/react";
+import SpriteSheet from "../src/stories/atoms/icons/sprite-sheet"; // Import the SpriteSheet component
 
 import "./css/overrides.css";
-// import '../storybook-static/css/main.css';
-import '../dist/storybook/css/main.css';
+import "../src/styles/main.css";
 
 const preview: Preview = {
 	parameters: {
 		storySort: {
-			order: ['Global', 'Atoms', 'Molecules', 'Organisms'],
+			order: ["Global", "Atoms", "Molecules", "Organisms"],
 		},
 		controls: {
 			matchers: {
@@ -16,6 +17,14 @@ const preview: Preview = {
 			},
 		},
 	},
+	decorators: [
+		(Story: FC) => (
+			<div>
+				<SpriteSheet /> {/* Icons */}
+				<Story />
+			</div>
+		),
+	],
 };
 
 export default preview;
