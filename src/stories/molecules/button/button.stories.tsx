@@ -8,6 +8,16 @@ export const Default: Story = {
 	name: "Button",
 };
 
+export const Primary: Story = {
+	render: () => (
+		<Button variant="primary" type="button">
+			I&apos;m a button
+		</Button>
+	),
+	name: "Primary",
+};
+
+
 export const Link: Story = {
 	render: (args: Props) => (
 		<Button {...args}>

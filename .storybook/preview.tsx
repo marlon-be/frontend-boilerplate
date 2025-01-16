@@ -31,12 +31,12 @@ const preview: Preview = {
 				{
 					id: "default",
 					title: "Default theme",
-					url: "./dist/css/theme.default.css",
+					url: "/css/theme.default.css",
 				},
 				{
 					id: "berryalloc",
 					title: "Berry Alloc",
-					url: "./dist/css/theme.berryalloc.css",
+					url: "/css/theme.berryalloc.css",
 				},
 			],
 		},

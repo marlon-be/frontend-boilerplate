@@ -4,7 +4,7 @@
 		--button-padding-x: var(--spacing-3);
 		--button-padding-y: var(--spacing-2);
         --buttton-font-size: 1rem;
-		--button-background: var(--color-neutral-800);
+		--button-background: var(--ds-color-neutral-800);
 		--button-underline-offset: 4px;
 
 		display: inline-flex;
@@ -20,6 +20,7 @@
     }
 
 	.button--primary {
+        --button-background: var(--ds-color-primary-500);
 		border: none;
 	}
 
