@@ -1,31 +1,5 @@
 @layer theme {
-	@font-face {
-		font-style: normal;
-		font-weight: 400;
-		src: url("/assets/fonts/montserrat-v26-latin-regular.woff2")
-			format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-		font-family: "Montserrat";
-		font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-	}
-	/* montserrat-500 - latin */
-
-	@font-face {
-		font-style: normal;
-		font-weight: 500;
-		src: url("/assets/fonts/montserrat-v26-latin-500.woff2")
-			format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-		font-family: "Montserrat";
-		font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-	}
-	/* montserrat-700 - latin */
-	@font-face {
-		font-style: normal;
-		font-weight: 700;
-		src: url("/assets/fonts/montserrat-v26-latin-700.woff2")
-			format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-		font-family: "Montserrat";
-		font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-	}
+	/* @font-face declaration would come here */
 
 	:root {
 		--font-family-base: "Montserrat", Helvetica, sans-erif;
