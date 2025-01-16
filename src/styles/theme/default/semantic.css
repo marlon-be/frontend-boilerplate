@@ -1,0 +1,39 @@
+@layer theme {
+    :root {
+        --ds-gutter: var(--t-default-gutter);
+        --ds-margin: var(--t-default-margin);
+
+        /* Typography */
+        --ds-header-h1-size: var(--t-default-header-h1-size);
+        --ds-header-h2-size: var(--t-default-header-h2-size);
+        --ds-header-h3-size: var(--t-default-header-h3-size);
+        --ds-header-h4-size: var(--t-default-header-h4-size);
+        --ds-header-h5-size: var(--t-default-header-h5-size);
+        --ds-header-h6-size: var(--t-default-header-h6-size);
+
+        /* Colors */
+
+        /* Colors -> Primary */
+        --ds-color-primary-300: var(--t-default-color-primary-300);
+        --ds-color-primary-500: var(--t-default-color-primary-500);
+        --ds-color-primary-700: var(--t-default-color-primary-700);
+
+        /* Colors -> Accent */
+        --ds-color-accent-300: var(--t-default-color-accent-300);
+        --ds-color-accent-500: var(--t-default-color-accent-500);
+        --ds-color-accent-700: var(--t-default-color-accent-700);
+
+        /* Colors -> Neutral */
+        --ds-color-neutral-000: var(--t-default-color-neutral-000);
+        --ds-color-neutral-100: var(--t-default-color-neutral-100);
+        --ds-color-neutral-200: var(--t-default-color-neutral-200);
+        --ds-color-neutral-300: var(--t-default-color-neutral-300);
+        --ds-color-neutral-400: var(--t-default-color-neutral-400);
+        --ds-color-neutral-500: var(--t-default-color-neutral-500);
+        --ds-color-neutral-600: var(--t-default-color-neutral-600);
+        --ds-color-neutral-700: var(--t-default-color-neutral-700);
+        --ds-color-neutral-800: var(--t-default-color-neutral-800);
+        --ds-color-neutral-900: var(--t-default-color-neutral-900);
+        --ds-color-neutral-1000: var(--t-default-color-neutral-1000);
+    }
+}

@@ -4,7 +4,10 @@ const config: StorybookConfig = {
 	// Required
 	framework: "@storybook/react-webpack5",
 	stories: ["../src/**/*.mdx", "../src/**/*.stories.@(js|jsx|mjs|ts|tsx)"],
-	staticDirs: [{ from: "../src/assets", to: "/assets" }],
+	staticDirs: [
+		{ from: "../src/assets", to: "/assets" },
+		{ from: "../dist/css", to: "/css" },
+	],
 	// Optional
 	addons: [
 		"storybook-css-modules-preset",
@@ -20,7 +23,8 @@ const config: StorybookConfig = {
 		"@storybook/addon-webpack5-compiler-swc",
 		"@storybook/addon-links",
 		"@storybook/addon-essentials",
-		"@storybook/addon-themes",
+		// "@storybook/addon-themes",
+		"storybook-theme-switch-addon",
 		"@chromatic-com/storybook",
 		"@storybook/addon-interactions",
 	],
