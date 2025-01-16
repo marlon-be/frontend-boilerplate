@@ -13,9 +13,6 @@
 @import "atoms/_container.css";
 @import "atoms/_section.css";
 
-/* Molecules */
-@import "molecules/_button.css";
-
 /* Organisms */
 @import "organisms/_card.css";
 @import "organisms/_dialog.css";

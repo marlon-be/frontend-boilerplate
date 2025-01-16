@@ -4,9 +4,6 @@ import Alert, { Props } from "./alert";
 type Story = StoryObj<Props>;
 
 export const Default: Story = {
-	render: (args) => {
-		return <Alert {...args} />;
-	},
 	args: {
 		variant: "info",
 		children: "This is an info alert (default).",
@@ -14,9 +11,6 @@ export const Default: Story = {
 };
 
 export const Dismissable: Story = {
-	render: (args) => {
-		return <Alert {...args} />;
-	},
 	args: {
 		variant: "info",
 		dismissable: true,
@@ -25,9 +19,6 @@ export const Dismissable: Story = {
 };
 
 export const Success: Story = {
-	render: (args) => {
-		return <Alert {...args} />;
-	},
 	args: {
 		variant: "success",
 		children: "This is a success alert.",
@@ -35,9 +26,6 @@ export const Success: Story = {
 };
 
 export const Warning: Story = {
-	render: (args) => {
-		return <Alert {...args} />;
-	},
 	args: {
 		variant: "warning",
 		children: "This is an warning alert.",
@@ -45,9 +33,6 @@ export const Warning: Story = {
 };
 
 export const Danger: Story = {
-	render: (args) => {
-		return <Alert {...args} />;
-	},
 	args: {
 		variant: "danger",
 		children: "This is a danger alert.",

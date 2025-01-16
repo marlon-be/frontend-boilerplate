@@ -1,6 +1,7 @@
 import { cva, type VariantProps } from "class-variance-authority";
 import { type HTMLAttributes, type PropsWithChildren, ReactNode } from "react";
 import Icon from "../../atoms/icons/icon";
+import Button from "../button/button";
 import { cn } from "../../../js/utils/style";
 import styles from "./alert.module.css";
 
@@ -31,9 +32,9 @@ export default function Alert({ variant, children, dismissable, className }: Pro
 		<div className={alertVariants({ variant, className })}>
 			{children}
 			{dismissable && (
-				<button className={cn(styles["alert__close"], "button--clean")} aria-label="Close">
+				<Button className={styles["alert__close"]} variant="clean" aria-label="Close">
 					<Icon variant="close" size="sm" />
-				</button>
+				</Button>
 			)}
 		</div>
 	);

@@ -1,26 +1,59 @@
-import { type AnchorHTMLAttributes, type ButtonHTMLAttributes, memo, type PropsWithChildren } from "react";
-import { cn } from "../../../js/utils/style";
+import { type ButtonHTMLAttributes, forwardRef, memo, type PropsWithChildren, useMemo } from "react";
+import { Slot } from "@radix-ui/react-slot";
 import { type WithRequired } from "../../../js/types";
+import { cva, type VariantProps } from "class-variance-authority";
+import styles from "./button.module.css";
 
-export type ButtonProps = WithRequired<ButtonHTMLAttributes<HTMLButtonElement>, "type"> & { as?: "button" };
-export type AnchorProps = AnchorHTMLAttributes<HTMLAnchorElement> & { href: string; as: "link" };
+const buttonVariants = cva(styles.button, {
+	variants: {
+		variant: {
+			default: styles["button--default"],
+			primary: styles["button--primary"],
+			link: styles["button--link"],
+			clean: styles["button--clean"],
+		},
+		width: {
+			default: "",
+			block: styles["button--block"],
+		},
+		size: {
+			small: styles["button--small"],
+			medium: styles["button--medium"],
+			large: styles["button--large"],
+		},
+	},
+	defaultVariants: {
+		variant: "default",
+		width: "default",
+		size: "medium",
+	},
+});
 
-export type Props = PropsWithChildren<ButtonProps | AnchorProps>;
+export type ButtonProps = WithRequired<ButtonHTMLAttributes<HTMLButtonElement>, "type">;
+export type ButtonVariants = VariantProps<typeof buttonVariants>;
 
+type AsButton = ButtonProps & { asChild?: false };
+type AsChild = Omit<ButtonProps, "type"> & { asChild: true };
 
-function Button({ children, className, ...props }: Props) {
-	if (props.as === "link") {
-		return (
-			<a className={cn("button button--link", className)} {...props}>
-				{children}
-			</a>
+export type Props = PropsWithChildren<(AsButton | AsChild) & ButtonVariants>;
+
+const Button = forwardRef<Props["asChild"] extends true ? HTMLElement : HTMLButtonElement, Props>(
+	({ children, className, variant, size, width, asChild = false, ...props }, ref) => {
+		const classNames = useMemo(
+			() => buttonVariants({ size, variant, width, className }),
+			[className, size, variant, width],
 		);
-	}
-	return (
-		<button className={cn("button", className)} {...props}>
-			{children}
-		</button>
-	);
-}
+
+		const Comp = asChild ? Slot : "button";
+
+		return (
+			<Comp ref={ref} className={classNames} {...props}>
+				{children}
+			</Comp>
+		);
+	},
+);
+
+Button.displayName = "Button";
 
 export default memo(Button);

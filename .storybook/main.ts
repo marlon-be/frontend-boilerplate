@@ -18,7 +18,6 @@ const config: StorybookConfig = {
 		},
 		"@storybook/addon-a11y",
 		"@storybook/addon-webpack5-compiler-swc",
-		"@storybook/addon-onboarding",
 		"@storybook/addon-links",
 		"@storybook/addon-essentials",
 		"@storybook/addon-themes",

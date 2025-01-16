@@ -10,6 +10,9 @@
     "build-storybook:css": "./node_modules/.bin/postcss src/styles/main.css -o dist/css/main.css --verbose"
   },
   "dependencies": {
+    "@radix-ui/react-slot": "^1.1.1",
+    "@types/react": "^19.0.7",
+    "@types/react-dom": "^19.0.3",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "container-query-polyfill": "^1.0.2",
@@ -18,12 +21,10 @@
   },
   "devDependencies": {
     "@chromatic-com/storybook": "^1.5.0",
-    "@lehoczky/postcss-fluid": "^1.0.3",
     "@storybook/addon-a11y": "^8.4.7",
     "@storybook/addon-essentials": "^8.4.7",
     "@storybook/addon-interactions": "^8.4.7",
     "@storybook/addon-links": "^8.1.5",
-    "@storybook/addon-onboarding": "^8.1.5",
     "@storybook/addon-postcss": "^2.0.0",
     "@storybook/addon-themes": "^8.3.4",
     "@storybook/addon-webpack5-compiler-swc": "^1.0.3",
@@ -44,6 +45,7 @@
     "prettier-plugin-css-order": "^2.1.2",
     "prop-types": "^15.8.1",
     "storybook": "^8.4.7",
-    "storybook-css-modules-preset": "^1.1.1"
+    "storybook-css-modules-preset": "^1.1.1",
+    "typescript": "^5.7.3"
   }
 }
