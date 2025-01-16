@@ -5,8 +5,11 @@
     "copy:assets": "cp -Rf ./src/assets/* ./dist/assets/",
     "build:css": "./node_modules/.bin/postcss src/styles/main.css -o dist/css/main.css --verbose",
     "watch:css": "chokidar 'src/styles/**/*.css' --command 'npm run build:css'",
-    "storybook": "npm run build-storybook && storybook dev -p 6006",
-    "build-storybook": "storybook build -o dist/storybook"
+    "storybook": "npm run build:themes && npm run build-storybook && storybook dev -p 6006",
+    "build-storybook": "storybook build -o dist/storybook",
+    "build:themes": "npm run build:theme:default && npm run build:theme:berryalloc",
+    "build:theme:default": "./node_modules/.bin/postcss src/styles/theme/default/index.css -o dist/css/theme.default.css --verbose",
+    "build:theme:berryalloc": "./node_modules/.bin/postcss src/styles/theme/berryalloc/index.css -o dist/css/theme.berryalloc.css --verbose"
   },
   "dependencies": {
     "@radix-ui/react-slot": "^1.1.1",

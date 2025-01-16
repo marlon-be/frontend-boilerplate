@@ -25,6 +25,22 @@ const preview: Preview = {
 			</div>
 		),
 	],
+	globalTypes: {
+		stylesheets: {
+			themes: [
+				{
+					id: "default",
+					title: "Default theme",
+					url: "./dist/css/theme.default.css",
+				},
+				{
+					id: "berryalloc",
+					title: "Berry Alloc",
+					url: "./dist/css/theme.berryalloc.css",
+				},
+			],
+		},
+	},
 };
 
 export default preview;
