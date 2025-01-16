@@ -4,7 +4,7 @@ const config: StorybookConfig = {
 	// Required
 	framework: "@storybook/react-webpack5",
 	stories: ["../src/**/*.mdx", "../src/**/*.stories.@(js|jsx|mjs|ts|tsx)"],
-	staticDirs: ["../public"],
+	staticDirs: [{ from: "../src/assets", to: "/assets" }],
 	// Optional
 	addons: [
 		"storybook-css-modules-preset",
