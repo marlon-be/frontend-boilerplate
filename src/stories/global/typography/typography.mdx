@@ -1,4 +1,5 @@
-import { Meta, Typeset } from '@storybook/blocks';
+import { Meta, Typeset, Story } from '@storybook/blocks';
+import * as HeadingStories from '../../atoms/typography/heading.stories';
 
 <Meta title="Typography" />
 
@@ -32,23 +33,17 @@ export const SampleText = 'Lorem ipsum dolor sit amet, consectetur adipiscing el
 
 **Weights:** 400(regular), 700(bold), 800(extrabold), 900(black)
 
+## Headings
 
-<Typeset
-fontSizes={[
-	Number(typography.size.s1),
-	Number(typography.size.s2),
-	Number(typography.size.s3),
-	Number(typography.size.m1),
-	Number(typography.size.m2),
-	Number(typography.size.m3),
-	Number(typography.size.l1),
-	Number(typography.size.l2),
-	Number(typography.size.l3),
-]}
-fontWeight={typography.weight.black}
-sampleText={SampleText}
-fontFamily={typography.type.primary}
-/>
+<Story of={HeadingStories.H1} />
+<Story of={HeadingStories.H2} />
+<Story of={HeadingStories.H3} />
+<Story of={HeadingStories.H4} />
+<Story of={HeadingStories.H5} />
+<Story of={HeadingStories.H6} />
 
-**Note:**
-This is just a font example, not an indication of titles
+## Headings using classNames
+
+<Story of={HeadingStories.H1AsClass} />
+<Story of={HeadingStories.H2AsClass} />
+<Story of={HeadingStories.H3AsClass} />

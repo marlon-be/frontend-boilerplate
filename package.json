@@ -3,33 +3,38 @@
   "version": "0.0.1",
   "scripts": {
     "copy:assets": "cp -Rf ./src/assets/* ./dist/assets/",
-    "build:css": "./node_modules/.bin/postcss src/styles/main.css -o dist/storybook/css/main.css --verbose",
+    "build:css": "./node_modules/.bin/postcss src/styles/main.css -o dist/css/main.css --verbose",
     "watch:css": "chokidar 'src/styles/**/*.css' --command 'npm run build:css'",
     "storybook": "npm run build-storybook && storybook dev -p 6006",
     "build-storybook": "storybook build -o dist/storybook",
     "build-storybook:css": "./node_modules/.bin/postcss src/styles/main.css -o dist/css/main.css --verbose"
   },
   "dependencies": {
+    "@radix-ui/react-slot": "^1.1.1",
+    "@types/react": "^19.0.7",
+    "@types/react-dom": "^19.0.3",
+    "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "container-query-polyfill": "^1.0.2",
-    "react": "^18.3.1"
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
   },
   "devDependencies": {
     "@chromatic-com/storybook": "^1.5.0",
-    "@lehoczky/postcss-fluid": "^1.0.3",
-    "@storybook/addon-a11y": "^8.3.4",
-    "@storybook/addon-essentials": "^8.1.5",
-    "@storybook/addon-interactions": "^8.1.5",
+    "@storybook/addon-a11y": "^8.4.7",
+    "@storybook/addon-essentials": "^8.4.7",
+    "@storybook/addon-interactions": "^8.4.7",
     "@storybook/addon-links": "^8.1.5",
-    "@storybook/addon-onboarding": "^8.1.5",
+    "@storybook/addon-postcss": "^2.0.0",
+    "@storybook/addon-themes": "^8.3.4",
     "@storybook/addon-webpack5-compiler-swc": "^1.0.3",
-    "@storybook/blocks": "^8.1.5",
-    "@storybook/react": "^8.1.5",
-    "@storybook/react-webpack5": "^8.1.5",
+    "@storybook/blocks": "^8.4.7",
+    "@storybook/react": "^8.4.7",
+    "@storybook/react-webpack5": "^8.4.7",
     "@storybook/test": "^8.1.5",
     "chokidar-cli": "^3.0.0",
     "cssnano": "^7.0.6",
-    "postcss": "^8.4.39",
+    "postcss": "^8.5.1",
     "postcss-cli": "^9.1.0",
     "postcss-combine-duplicated-selectors": "^10.0.3",
     "postcss-custom-media": "^10.0.0",
@@ -39,6 +44,8 @@
     "prettier": "^3.2.5",
     "prettier-plugin-css-order": "^2.1.2",
     "prop-types": "^15.8.1",
-    "storybook": "^8.1.5"
+    "storybook": "^8.4.7",
+    "storybook-css-modules-preset": "^1.1.1",
+    "typescript": "^5.7.3"
   }
 }

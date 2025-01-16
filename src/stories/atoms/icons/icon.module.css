@@ -22,6 +22,10 @@
 		--icon-size: var(--icon-size-sm);
 	}
 
+    .icon--md {
+        --icon-size: var(--icon-size-md);
+    }
+
 	.icon--lg {
 		--icon-size: var(--icon-size-lg);
 	}

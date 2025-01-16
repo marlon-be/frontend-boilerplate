@@ -1,5 +1,5 @@
-import { IconGallery, IconItem, Meta } from "@storybook/blocks";
-
+import { Canvas, IconGallery, IconItem, Meta, Story } from "@storybook/blocks";
+import * as AlertStories from "./alert.stories";
 
 <Meta title="Molecules/Alert" />
 
@@ -12,15 +12,23 @@ Sizes of Icons are exposed in the theme layer, this makes it handy for size calc
 ## Usage
 
 ```
-<Alert type="success" />
+<Alert variant="success" />
 ```
 
-## Close button
+## Dismissible alert
 
-In case an alert has a close button it can be the following:
+An alert can become dismissible by adding the `dismissible` prop:
 
 ```
-<Alert type="success" hasClose />
+<Alert variant="success" dismissible />
 ```
 
 The padding for the close button gets calculated based on the exposed icon width, find out more in the icons section.
+
+## Variations
+
+<Story of={AlertStories.Default} />
+<Story of={AlertStories.Dismissable} />
+<Story of={AlertStories.Success} />
+<Story of={AlertStories.Warning} />
+<Story of={AlertStories.Danger} />

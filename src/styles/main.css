@@ -11,12 +11,7 @@
 /* Atoms */
 @import "atoms/_typography.css";
 @import "atoms/_container.css";
-@import "atoms/_icon.css";
 @import "atoms/_section.css";
-
-/* Molecules */
-@import "molecules/_alert.css";
-@import "molecules/_button.css";
 
 /* Organisms */
 @import "organisms/_card.css";

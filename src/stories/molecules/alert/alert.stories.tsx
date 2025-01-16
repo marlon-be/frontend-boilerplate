@@ -1,18 +1,44 @@
 import { Meta, StoryObj } from '@storybook/react';
-import Alert, { AlertProps } from './alert';
+import Alert, { Props } from "./alert";
 
-type Story = StoryObj<AlertProps>;
+type Story = StoryObj<Props>;
 
 export const Default: Story = {
-	render: (args) => {
-		return <Alert {...args} />;
-	},
 	args: {
-		type: 'base',
-		hasClose: false,
-		children: 'This is an alert, change option to bottom to view all.',
+		variant: "info",
+		children: "This is an info alert (default).",
 	},
 };
+
+export const Dismissable: Story = {
+	args: {
+		variant: "info",
+		dismissable: true,
+		children: "This is an dismissible info alert.",
+	},
+};
+
+export const Success: Story = {
+	args: {
+		variant: "success",
+		children: "This is a success alert.",
+	},
+};
+
+export const Warning: Story = {
+	args: {
+		variant: "warning",
+		children: "This is an warning alert.",
+	},
+};
+
+export const Danger: Story = {
+	args: {
+		variant: "danger",
+		children: "This is a danger alert.",
+	},
+};
+
 
 export default {
 	component: Alert,

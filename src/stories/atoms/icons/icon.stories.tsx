@@ -1,15 +1,14 @@
 import { Meta, StoryObj } from '@storybook/react';
-import Icon, { IconProps, ICON_NAMES } from './icon';
+import Icon, { Props, ICON_NAMES } from './icon';
 
-type Story = StoryObj<IconProps>;
+type Story = StoryObj<Props>;
 
 export const Default: Story = {
 	render: (args) => {
 		return <Icon {...args} />;
 	},
 	args: {
-		size: 'medium',
-		name: ICON_NAMES[0],
+		variant: 'add',
 	},
 };
 
@@ -17,15 +16,20 @@ export default {
 	component: Icon,
 	title: 'Atoms/Icon',
 	argTypes: {
-		size: {
-			control: 'select',
-		},
-		name: {
+		variant: {
 			control: 'select',
 			options: ICON_NAMES,
+		},
+		size: {
+			control: 'radio',
+			options: ['sm', 'md', 'lg', 'xl'],
 		},
 	},
 	parameters: {
 		layout: 'centered',
+	},
+	args: {
+		variant: 'add',
+		size: 'md',
 	},
 } satisfies Meta;

@@ -24,15 +24,16 @@ Sizes of Icons are exposed in the theme layer, this makes it handy for size calc
 ## Usage
 
 ```
-<Icon name="download" />
+<Icon variant="download" size="sm" />
 ```
 
-## Available icons
+## Icon list
 
 <IconGallery>
 	{ICON_NAMES.map((iconName) => (
 		<IconItem name={iconName}>
-			<Icon name={iconName} />
+			<Icon variant={iconName} />
 		</IconItem>
 	))}
 </IconGallery>
+
