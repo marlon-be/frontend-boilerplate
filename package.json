@@ -2,7 +2,7 @@
   "name": "frontend-boilerplate",
   "version": "0.0.1",
   "scripts": {
-    "copy:assets": "cp -Rf ./src/assets/* ./dist/assets/",
+    "copy:assets": "cp -Rf ./src/assets/* ./public/assets/",
     "build:css": "./node_modules/.bin/postcss src/styles/main.css -o dist/css/main.css --verbose",
     "watch:css": "chokidar 'src/styles/**/*.css' --command 'npm run build:css'",
     "storybook": "npm run build-storybook && storybook dev -p 6006",
