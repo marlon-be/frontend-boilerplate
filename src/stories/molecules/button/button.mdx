@@ -1,0 +1,20 @@
+import { Canvas, IconGallery, IconItem, Meta, Story } from "@storybook/blocks";
+import * as ButtonStories from "./button.stories";
+
+<Meta title="Molecules/Button" />
+
+# Button
+
+## Usage
+
+```
+<Alert variant="success" />
+```
+
+The padding for the close button gets calculated based on the exposed icon width, find out more in the icons section.
+
+## Variations
+
+<Story of={ButtonStories.Default} />
+<Story of={ButtonStories.Primary} />
+<Story of={ButtonStories.Link} />
