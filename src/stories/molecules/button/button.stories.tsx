@@ -4,14 +4,33 @@ import Button, { type Props } from "./button";
 type Story = StoryObj<typeof Button>;
 
 export const Default: Story = {
-	render: () => <Button type="button">I&apos;m a button</Button>,
+	render: () => <Button type="button">Default button</Button>,
 	name: "Button",
 };
+
+export const Primary: Story = {
+	render: () => (
+		<Button variant="primary" type="button">
+			Primary button
+		</Button>
+	),
+	name: "Primary",
+};
+
+export const Secondary: Story = {
+	render: () => (
+		<Button variant="secondary" type="button">
+			Secondary button
+		</Button>
+	),
+	name: "Secondary",
+};
+
 
 export const Link: Story = {
 	render: (args: Props) => (
 		<Button {...args}>
-			<a href="/">I'm a link</a>
+			<a href="/">Plain link</a>
 		</Button>
 	),
 	args: {
