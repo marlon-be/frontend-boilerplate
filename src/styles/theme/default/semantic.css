@@ -23,7 +23,7 @@
         --ds-color-accent-500: var(--t-default-color-accent-500);
         --ds-color-accent-700: var(--t-default-color-accent-700);
 
-        /* Colors -> Neutral */
+        /* Colors -> Neutral */        
         --ds-color-neutral-000: var(--t-default-color-neutral-000);
         --ds-color-neutral-100: var(--t-default-color-neutral-100);
         --ds-color-neutral-200: var(--t-default-color-neutral-200);
@@ -35,5 +35,25 @@
         --ds-color-neutral-800: var(--t-default-color-neutral-800);
         --ds-color-neutral-900: var(--t-default-color-neutral-900);
         --ds-color-neutral-1000: var(--t-default-color-neutral-1000);
+
+        /* Buttons -> Primary */
+        --ds-button-primary-foreground-color: var(--ds-color-neutral-000);
+        --ds-button-primary-background-color: var(--ds-color-primary-500);
+        --ds-button-primary-border-color: var(--ds-button-primary-background-color);
+
+        /* Buttons -> Secondary */
+        --ds-button-secondary-foreground-color: var(--ds-color-primary-500);
+        --ds-button-secondary-background-color: transparent;
+        --ds-button-secondary-border-color: var(--ds-button-secondary-foreground-color);
+
+        /* Buttons -> Link */
+        --ds-button-link-foreground-color: var(--ds-color-primary-500);
+        --ds-button-link-background-color: transparent;
+        --ds-button-link-border-color: transparent;
+
+        /* CTA -> Accent */
+        --ds-cta-accent-foreground-color: var(--ds-color-primary-500);
+        --ds-cta-accent-background-color: transparent;
+        --ds-cta-accent-border-color: transparent;
     }
 }

@@ -17,6 +17,16 @@ export const Primary: Story = {
 	name: "Primary",
 };
 
+export const Secondary: Story = {
+	render: () => (
+		<Button variant="secondary" type="button">
+			Secondary button
+		</Button>
+	),
+	name: "Secondary",
+};
+
+
 export const Link: Story = {
 	render: (args: Props) => (
 		<Button {...args}>

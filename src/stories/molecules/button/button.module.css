@@ -1,17 +1,21 @@
 @layer molecules.button {
 	.button {
-		--button-color: var(--color-neutral-000);
-		--button-padding-x: var(--spacing-3);
+		--button-foreground: var(--ds-color-neutral-000);
+		--button-background: var(--ds-color-neutral-800);
+
+        --button-padding-x: var(--spacing-3);
 		--button-padding-y: var(--spacing-2);
         --buttton-font-size: 1rem;
-		--button-background: var(--ds-color-neutral-800);
 		--button-underline-offset: 4px;
+
+        --button-border-width: 1px;
 
 		display: inline-flex;
 		padding: var(--button-padding-y) var(--button-padding-x);
         font-size: var(--button-font-size);
 		background-color: var(--button-background);
-		color: var(--button-color);
+		color: var(--button-foreground);
+        border: var(--button-border-width) solid var(--button-border-color);
 		cursor: pointer;
 	}
 
@@ -20,15 +24,27 @@
     }
 
 	.button--primary {
-        --button-background: var(--ds-color-primary-500);
-		border: none;
+        --button-foreground: var(--ds-button-primary-foreground-color);
+        --button-background: var(--ds-button-primary-background-color);
+        --button-border-color: var(--ds-button-primary-border-color);
+
+        border: none;
 	}
+
+    .button--secondary {
+        --button-foreground: var(--ds-button-secondary-foreground-color);
+        --button-background: var(--ds-button-secondary-background-color);
+        --button-border-color: var(--ds-button-secondary-border-color);
+    }
 
 	.button--link {
 		--button-padding-x: 0;
 		--button-padding-y: 0;
-		--button-background: transparent;
-		--button-color: var(--color-neutral-800);
+
+        --button-foreground: var(--ds-button-link-foreground-color);
+        --button-background: var(--ds-button-link-background-color);
+        --button-border-color: var(--ds-button-link-border-color);
+        --button-border-width: 0;
 
 		text-decoration: underline;
 		text-underline-offset: var(--button-underline-offset);

@@ -9,6 +9,7 @@ const buttonVariants = cva(styles.button, {
 		variant: {
 			default: styles["button--default"],
 			primary: styles["button--primary"],
+			secondary: styles["button--secondary"],
 			link: styles["button--link"],
 			clean: styles["button--clean"],
 		},

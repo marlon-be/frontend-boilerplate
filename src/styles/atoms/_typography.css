@@ -23,6 +23,7 @@
 	.h4,
 	.h5,
 	.h6 {
+		font-size: var(--heading-font-size);
 		font-family: var(--font-family-heading);
 		font-weight: var(--font-weight-bold);
 
@@ -36,29 +37,39 @@
 
 	h1,
 	.h1 {
+		--heading-font-size: var(--ds-header-h1-size);
 		margin-bottom: var(--spacing-5);
-		font-size: 2.4rem;
 	}
 
 	h2,
 	.h2 {
+		--heading-font-size: var(--ds-header-h2-size);
 		margin-bottom: var(--spacing-5);
-		font-size: 2rem;
 		line-height: 1.3;
 	}
 
 	h3,
 	.h3 {
+		--heading-font-size: var(--ds-header-h3-size);
 		margin-bottom: var(--spacing-4);
 		font-weight: 600;
-		font-size: 1.8rem;
 	}
 
 	h4,
 	.h4 {
+		--heading-font-size: var(--ds-header-h4-size);
 		margin-bottom: var(--spacing-3);
 		font-weight: 600;
-		font-size: 1.6rem;
+	}
+
+	h5,
+	.h5 {
+		--heading-font-size: var(--ds-header-h5-size);
+	}
+
+	h6,
+	.h6 {
+		--heading-font-size: var(--ds-header-h6-size);
 	}
 
 	.lead,
